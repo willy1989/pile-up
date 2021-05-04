@@ -27,7 +27,7 @@ public class ParticleSystemManager : MonoBehaviour
 
         particleSystem.transform.position = go.transform.position - new Vector3(0f, go.transform.localScale.y / 2, 0f);
 
-        particleSystem.transform.localScale = go.transform.localScale;
+        //particleSystem.transform.localScale = go.transform.localScale;
 
         particleSystem.Play();
     }
