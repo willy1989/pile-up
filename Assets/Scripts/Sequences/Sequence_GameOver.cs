@@ -8,15 +8,29 @@ public class Sequence_GameOver : Sequence
 
     [SerializeField] CubeSpawner cubeSpawner;
 
+    [SerializeField] ScoreManager scoreManager;
+
     public override void doAction()
     {
-        //
+        ui_manager.showGameOverCanvas();
+        cubeSpawner.setRigidBdtoGravity(dataContainer.currentMovingCube);
+
+        if (scoreManager.getHighScore() < scoreManager.score)
+        {
+            ui_manager.showHighScoreText(true);
+        }
+
+        scoreManager.setNewScoreHighScore();
+        ui_manager.updateHighScore(scoreManager.getHighScore());
+        ui_manager.showHighScore(true);
+
+        
     }
 
     public override void setUp()
     {
-        ui_manager.showGameOverCanvas();
-        cubeSpawner.setRigidBdtoGravity(dataContainer.currentMovingCube);
+        
+
     }
 
     public override Sequence chooseNextSequence()

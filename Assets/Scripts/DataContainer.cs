@@ -22,11 +22,7 @@ public class DataContainer : MonoBehaviour
 
     public int comboCount = 0;
 
-    public void Awake()
-    {
-        distCamBottomCube = cam.position - currentBottomCube.transform.position;
-    }
-
+   
 }
 
 
