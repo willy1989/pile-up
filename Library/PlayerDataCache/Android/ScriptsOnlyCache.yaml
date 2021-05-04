@@ -10,6 +10,7 @@ ScriptsOnlyBuild:
     - CutCube_deactivate
     - DataContainer
     - InputManager
+    - ParticleSystemManager
     - ScenesManager
     - ScoreManager
     - SequencePlayer
@@ -22,7 +23,6 @@ ScriptsOnlyBuild:
     - Sequence_spawnStackedCutCubes
     - TopCubeMover
     - UI_manager
-    - gravityTest
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -97,44 +97,48 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10348}
     - Class: 114
-      Script: {instanceID: 10444}
+      Script: {instanceID: 10436}
     - Class: 114
-      Script: {instanceID: 10464}
+      Script: {instanceID: 10446}
     - Class: 114
-      Script: {instanceID: 10486}
+      Script: {instanceID: 10466}
     - Class: 114
-      Script: {instanceID: 10496}
+      Script: {instanceID: 10488}
     - Class: 114
-      Script: {instanceID: 10588}
+      Script: {instanceID: 10498}
     - Class: 114
-      Script: {instanceID: 10598}
+      Script: {instanceID: 10590}
     - Class: 114
-      Script: {instanceID: 10710}
+      Script: {instanceID: 10600}
     - Class: 114
-      Script: {instanceID: 10726}
+      Script: {instanceID: 10712}
     - Class: 114
-      Script: {instanceID: 10882}
+      Script: {instanceID: 10728}
     - Class: 114
-      Script: {instanceID: 10984}
+      Script: {instanceID: 10884}
     - Class: 114
-      Script: {instanceID: 11038}
+      Script: {instanceID: 11040}
     - Class: 114
-      Script: {instanceID: 11062}
+      Script: {instanceID: 11064}
     - Class: 114
-      Script: {instanceID: 11158}
+      Script: {instanceID: 11160}
     - Class: 114
-      Script: {instanceID: 11224}
+      Script: {instanceID: 11226}
     - Class: 114
-      Script: {instanceID: 11326}
+      Script: {instanceID: 11328}
     - Class: 114
-      Script: {instanceID: 11332}
+      Script: {instanceID: 11334}
     - Class: 114
-      Script: {instanceID: 11392}
+      Script: {instanceID: 11394}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -401,6 +405,12 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
+      Hash: ab5c04fd93aec92904ce58a5163a14e7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ParticleSystemManager
+  - hash:
+      serializedVersion: 2
       Hash: e4b528141bcdffe9d40f5edbca8e48e1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -479,7 +489,7 @@ ScriptsOnlyBuild:
     className: CubeCollision
   - hash:
       serializedVersion: 2
-      Hash: ad63041a171e50cf95e0dc069ee56b36
+      Hash: 3bbe60754fdc5692964b1281c75a48c3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Sequence_SpawnOnlyStackedCube
@@ -708,4 +718,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/willy/Documents/unity/Stack clone/build.apk
+  playerPath: C:/Users/willy/Documents/unity/Pile_up/build.apk

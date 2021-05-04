@@ -8,6 +8,8 @@ public class Sequence_SpawnOnlyStackedCube : Sequence
 
     [SerializeField] ColorManager colorManager;
 
+    [SerializeField] ParticleSystemManager particleSystemManager;
+
     public override void setUp()
     {
        
@@ -31,6 +33,10 @@ public class Sequence_SpawnOnlyStackedCube : Sequence
         // Only grow the stacked cube when the player stacked 5 cubes perfectly in a row
         dataContainer.comboCount++;
 
+        // Particle system effect
+        particleSystemManager.playStackParticleEffect(stackedCube, dataContainer.comboCount);
+
+
         // Update references
         dataContainer.currentBottomCube = stackedCube;
 
@@ -41,7 +47,7 @@ public class Sequence_SpawnOnlyStackedCube : Sequence
 
     private bool checkGrowCube()
     {
-        if (dataContainer.comboCount >= 8)
+        if (dataContainer.comboCount >= 5)
         {
             dataContainer.comboCount = 0;
             return true;
@@ -76,9 +82,4 @@ public class Sequence_SpawnOnlyStackedCube : Sequence
         
     }
 
-    
-
-    
-
-    
 }

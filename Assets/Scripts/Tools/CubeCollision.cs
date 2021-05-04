@@ -39,15 +39,15 @@ public class CubeCollision : MonoBehaviour
 
         
 
-        if (dist < 0.06f)
+        if (dist < 0.07f)
         {
-            Debug.Log("currentWayPoint = " + currentWayPoint);
+            //Debug.Log("currentWayPoint = " + currentWayPoint);
 
             float distTopCubeWayPoint = (topCubeCornerPos - currentWayPoint).magnitude;
             float distBottomCubeWayPoint = (bottomCubeCornerPos - currentWayPoint).magnitude;
 
-            Debug.Log("distTopCubeWayPoint = " + distTopCubeWayPoint);
-            Debug.Log("distBottomCubeWayPoint = " + distBottomCubeWayPoint);
+            //Debug.Log("distTopCubeWayPoint = " + distTopCubeWayPoint);
+            //Debug.Log("distBottomCubeWayPoint = " + distBottomCubeWayPoint);
 
             if (topCubeCornerPos.y > bottomCubeCornerPos.y && distTopCubeWayPoint > distBottomCubeWayPoint)
             {
