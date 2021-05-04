@@ -7,7 +7,9 @@ public class UI_manager : MonoBehaviour
 {
     [SerializeField] GameObject gameOverButton;
     [SerializeField] GameObject gameOverText;
-    [SerializeField] Text ScoreText; 
+    [SerializeField] Text ScoreText;
+    [SerializeField] Text HighScoreText;
+    [SerializeField] Text NewHighScoreText;
 
     public void showGameOverCanvas()
     {
@@ -18,5 +20,20 @@ public class UI_manager : MonoBehaviour
     public void updateScore(int score)
     {
         ScoreText.text = ""+score;
+    }
+
+    public void updateHighScore(int highScore)
+    {
+        HighScoreText.text = "" + highScore;
+    }
+
+    public void showHighScore(bool show)
+    {
+        HighScoreText.gameObject.SetActive(show);
+    }
+
+    public void showHighScoreText(bool show)
+    {
+        NewHighScoreText.gameObject.SetActive(show);
     }
 }

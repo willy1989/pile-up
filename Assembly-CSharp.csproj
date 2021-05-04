@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\Sequences\Sequence.cs" />
     <Compile Include="Assets\Scripts\Sequences\Sequence_checkStackCubeCollision.cs" />
     <Compile Include="Assets\Scripts\Sequences\Sequence_GameOver.cs" />
+    <Compile Include="Assets\Scripts\Sequences\Sequence_gameStarts.cs" />
     <Compile Include="Assets\Scripts\Sequences\Sequence_growCube.cs" />
     <Compile Include="Assets\Scripts\Sequences\Sequence_MoveCube_listenToInput.cs" />
     <Compile Include="Assets\Scripts\Sequences\Sequence_SpawnMovingCube.cs" />

@@ -19,6 +19,7 @@ ScriptsOnlyBuild:
     - Sequence_SpawnMovingCube
     - Sequence_SpawnOnlyStackedCube
     - Sequence_checkStackCubeCollision
+    - Sequence_gameStarts
     - Sequence_growCube
     - Sequence_spawnStackedCutCubes
     - TopCubeMover
@@ -130,6 +131,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11334}
     - Class: 114
       Script: {instanceID: 11394}
+    - Class: 114
+      Script: {instanceID: 12918}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -315,7 +318,7 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: bddbf67ab7494990fe9be5469e6e0519
+      Hash: e6e7919dd31c40cd6769d02f25079e19
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UI_manager
@@ -603,7 +606,7 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: 46832185d194977caa97938326d135ad
+      Hash: 483ba9bc75c6172969335aae2916f700
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Sequence_GameOver
@@ -715,6 +718,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 26489d0d0bd84061acc1ba848c966acc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Sequence_gameStarts
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
