@@ -70,12 +70,13 @@
     <Compile Include="Assets\Scripts\Sequences\Sequence.cs" />
     <Compile Include="Assets\Scripts\Sequences\Sequence_checkStackCubeCollision.cs" />
     <Compile Include="Assets\Scripts\Sequences\Sequence_GameOver.cs" />
-    <Compile Include="Assets\Scripts\Sequences\Sequence_gameStarts.cs" />
     <Compile Include="Assets\Scripts\Sequences\Sequence_growCube.cs" />
     <Compile Include="Assets\Scripts\Sequences\Sequence_MoveCube_listenToInput.cs" />
+    <Compile Include="Assets\Scripts\Sequences\Sequence_setUpGame.cs" />
     <Compile Include="Assets\Scripts\Sequences\Sequence_SpawnMovingCube.cs" />
     <Compile Include="Assets\Scripts\Sequences\Sequence_SpawnOnlyStackedCube.cs" />
     <Compile Include="Assets\Scripts\Sequences\Sequence_spawnStackedCutCubes.cs" />
+    <Compile Include="Assets\Scripts\Sequences\Sequence_startGame.cs" />
     <Compile Include="Assets\Scripts\Sequences\SequencePlayer.cs" />
     <Compile Include="Assets\Scripts\Tools\CameraManager.cs" />
     <Compile Include="Assets\Scripts\Tools\ColorManager.cs" />

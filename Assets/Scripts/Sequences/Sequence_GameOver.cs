@@ -12,19 +12,22 @@ public class Sequence_GameOver : Sequence
 
     public override void doAction()
     {
-        ui_manager.showGameOverCanvas();
+        ui_manager.showUiElement(ui_manager.gameOverButton, true);
+        //ui_manager.showUiElement(ui_manager.gameOverText, true);
         cubeSpawner.setRigidBdtoGravity(dataContainer.currentMovingCube);
 
         if (scoreManager.getHighScore() < scoreManager.score)
         {
-            ui_manager.showHighScoreText(true);
+            ui_manager.showUiElement(ui_manager.NewHighScoreText.gameObject, true);
+            ui_manager.showUiElement(ui_manager.HighScoreText.gameObject, true);
+            ui_manager.showUiElement(ui_manager.ScoreText.gameObject, false);
         }
 
         scoreManager.setNewScoreHighScore();
         ui_manager.updateHighScore(scoreManager.getHighScore());
-        ui_manager.showHighScore(true);
-
         
+
+
     }
 
     public override void setUp()
