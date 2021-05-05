@@ -19,9 +19,10 @@ ScriptsOnlyBuild:
     - Sequence_SpawnMovingCube
     - Sequence_SpawnOnlyStackedCube
     - Sequence_checkStackCubeCollision
-    - Sequence_gameStarts
     - Sequence_growCube
+    - Sequence_setUpGame
     - Sequence_spawnStackedCutCubes
+    - Sequence_startGame
     - TopCubeMover
     - UI_manager
     UnityEditor.Graphs.dll:
@@ -98,41 +99,43 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10348}
     - Class: 114
-      Script: {instanceID: 10436}
+      Script: {instanceID: 10380}
     - Class: 114
-      Script: {instanceID: 10446}
+      Script: {instanceID: 10438}
     - Class: 114
-      Script: {instanceID: 10466}
+      Script: {instanceID: 10448}
     - Class: 114
-      Script: {instanceID: 10488}
+      Script: {instanceID: 10468}
     - Class: 114
-      Script: {instanceID: 10498}
+      Script: {instanceID: 10490}
     - Class: 114
-      Script: {instanceID: 10590}
+      Script: {instanceID: 10500}
     - Class: 114
-      Script: {instanceID: 10600}
+      Script: {instanceID: 10592}
     - Class: 114
-      Script: {instanceID: 10712}
+      Script: {instanceID: 10602}
     - Class: 114
-      Script: {instanceID: 10728}
+      Script: {instanceID: 10714}
     - Class: 114
-      Script: {instanceID: 10884}
+      Script: {instanceID: 10730}
     - Class: 114
-      Script: {instanceID: 11040}
+      Script: {instanceID: 10886}
     - Class: 114
-      Script: {instanceID: 11064}
+      Script: {instanceID: 11036}
     - Class: 114
-      Script: {instanceID: 11160}
+      Script: {instanceID: 11044}
     - Class: 114
-      Script: {instanceID: 11226}
+      Script: {instanceID: 11068}
     - Class: 114
-      Script: {instanceID: 11328}
+      Script: {instanceID: 11164}
     - Class: 114
-      Script: {instanceID: 11334}
+      Script: {instanceID: 11230}
     - Class: 114
-      Script: {instanceID: 11394}
+      Script: {instanceID: 11332}
     - Class: 114
-      Script: {instanceID: 12918}
+      Script: {instanceID: 11338}
+    - Class: 114
+      Script: {instanceID: 11398}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -318,7 +321,7 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: e6e7919dd31c40cd6769d02f25079e19
+      Hash: f13c2f4d76f1de9a399898176914702e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UI_manager
@@ -388,6 +391,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ColorManager
+  - hash:
+      serializedVersion: 2
+      Hash: 186faac7762ce1b7766d55a0d9615533
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Sequence_startGame
   - hash:
       serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
@@ -570,6 +579,12 @@ ScriptsOnlyBuild:
     className: AudioTrack
   - hash:
       serializedVersion: 2
+      Hash: 26489d0d0bd84061acc1ba848c966acc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Sequence_setUpGame
+  - hash:
+      serializedVersion: 2
       Hash: ae83e830e7a90c0aff918c4c2e520825
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -718,12 +733,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 26489d0d0bd84061acc1ba848c966acc
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Sequence_gameStarts
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
