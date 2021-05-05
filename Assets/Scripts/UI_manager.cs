@@ -5,21 +5,21 @@ using UnityEngine.UI;
 
 public class UI_manager : MonoBehaviour
 {
-    [SerializeField] GameObject gameOverButton;
-    [SerializeField] GameObject gameOverText;
-    [SerializeField] Text ScoreText;
-    [SerializeField] Text HighScoreText;
-    [SerializeField] Text NewHighScoreText;
-
-    public void showGameOverCanvas()
-    {
-        gameOverButton.SetActive(true);
-        gameOverText.SetActive(true);
-    }
+    public GameObject gameOverButton;
+    public GameObject gameOverText;
+    public Text ScoreText;
+    public Text HighScoreText;
+    public Text NewHighScoreText;
+    public Text StartGameText;
 
     public void updateScore(int score)
     {
         ScoreText.text = ""+score;
+    }
+
+    public void showUiElement(GameObject go, bool show)
+    {
+        go.SetActive(show);
     }
 
     public void updateHighScore(int highScore)
@@ -27,13 +27,5 @@ public class UI_manager : MonoBehaviour
         HighScoreText.text = "" + highScore;
     }
 
-    public void showHighScore(bool show)
-    {
-        HighScoreText.gameObject.SetActive(show);
-    }
-
-    public void showHighScoreText(bool show)
-    {
-        NewHighScoreText.gameObject.SetActive(show);
-    }
+   
 }

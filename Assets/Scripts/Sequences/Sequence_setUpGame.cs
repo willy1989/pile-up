@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sequence_gameStarts : Sequence
+public class Sequence_setUpGame : Sequence
 {
     [SerializeField] ScoreManager scoreManager;
 
