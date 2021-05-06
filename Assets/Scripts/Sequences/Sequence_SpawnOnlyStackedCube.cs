@@ -10,6 +10,8 @@ public class Sequence_SpawnOnlyStackedCube : Sequence
 
     [SerializeField] ParticleSystemManager particleSystemManager;
 
+    [SerializeField] AudioManager audioManager;
+
     public override void setUp()
     {
        
@@ -62,6 +64,8 @@ public class Sequence_SpawnOnlyStackedCube : Sequence
     public override void doAction()
     {
         spawnCube();
+        // Play stack sound effect
+        audioManager.playSoundEffect(audioManager.perfectlyStackSound);
     }
 
     public override Sequence chooseNextSequence()

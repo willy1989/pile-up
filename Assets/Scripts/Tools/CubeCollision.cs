@@ -39,7 +39,7 @@ public class CubeCollision : MonoBehaviour
 
         
 
-        if (dist < 0.07f)
+        if (dist < 0.2f)
         {
             //Debug.Log("currentWayPoint = " + currentWayPoint);
 

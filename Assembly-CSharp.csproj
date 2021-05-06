@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\Sequences\Sequence_spawnStackedCutCubes.cs" />
     <Compile Include="Assets\Scripts\Sequences\Sequence_startGame.cs" />
     <Compile Include="Assets\Scripts\Sequences\SequencePlayer.cs" />
+    <Compile Include="Assets\Scripts\Tools\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Tools\CameraManager.cs" />
     <Compile Include="Assets\Scripts\Tools\ColorManager.cs" />
     <Compile Include="Assets\Scripts\Tools\CubeCollision.cs" />

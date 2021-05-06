@@ -6,9 +6,12 @@ public class Sequence_growCube : Sequence
 {
     [SerializeField] CubeGrower cubeGrower;
 
+    [SerializeField] AudioManager audioManager;
+
 
     public override void setUp()
     {
+        audioManager.playSoundEffect(audioManager.growCubeSound);
         growCube();
     }
 

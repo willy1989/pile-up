@@ -10,17 +10,22 @@ public class Sequence_GameOver : Sequence
 
     [SerializeField] ScoreManager scoreManager;
 
+    [SerializeField] AudioManager audioManager;
+
     public override void doAction()
     {
         ui_manager.showUiElement(ui_manager.gameOverButton, true);
         //ui_manager.showUiElement(ui_manager.gameOverText, true);
         cubeSpawner.setRigidBdtoGravity(dataContainer.currentMovingCube);
 
+        // New high score
         if (scoreManager.getHighScore() < scoreManager.score)
         {
             ui_manager.showUiElement(ui_manager.NewHighScoreText.gameObject, true);
             ui_manager.showUiElement(ui_manager.HighScoreText.gameObject, true);
             ui_manager.showUiElement(ui_manager.ScoreText.gameObject, false);
+
+            audioManager.playSoundEffect(audioManager.newRecordSound);
         }
 
         scoreManager.setNewScoreHighScore();
