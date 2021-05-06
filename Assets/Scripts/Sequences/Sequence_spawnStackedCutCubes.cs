@@ -7,6 +7,8 @@ public class Sequence_spawnStackedCutCubes : Sequence
     [SerializeField] CubeSpawner cubeSpawner;
 
     [SerializeField] ColorManager colormanager;
+
+    [SerializeField] AudioManager audioManager;
    
 
     public override void setUp()
@@ -30,6 +32,9 @@ public class Sequence_spawnStackedCutCubes : Sequence
         // Reset combo manager
         // Since the player didn't stack the current stacked cube perfectly, we reset the combo count
         dataContainer.comboCount = 0;
+
+        // Play stack sound effect
+        audioManager.playSoundEffect(audioManager.stackSound);
     }
 
     public override Sequence chooseNextSequence()

@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AudioManager
     - CameraManager
     - ColorManager
     - CubeCollision
@@ -67,6 +68,10 @@ ScriptsOnlyBuild:
     - Class: 65
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
@@ -136,6 +141,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11338}
     - Class: 114
       Script: {instanceID: 11398}
+    - Class: 114
+      Script: {instanceID: 12978}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -423,13 +430,13 @@ ScriptsOnlyBuild:
     className: ParticleSystemManager
   - hash:
       serializedVersion: 2
-      Hash: e4b528141bcdffe9d40f5edbca8e48e1
+      Hash: 907dbfa5e818f29b4729c730359a26bd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Sequence_spawnStackedCutCubes
   - hash:
       serializedVersion: 2
-      Hash: df4cec85230d2ee0fd79966417e0ae89
+      Hash: 8c1fbf3eb7ef8196b62be7ff0765a4c8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Sequence_growCube
@@ -501,7 +508,7 @@ ScriptsOnlyBuild:
     className: CubeCollision
   - hash:
       serializedVersion: 2
-      Hash: 3bbe60754fdc5692964b1281c75a48c3
+      Hash: d186a0e00d6941b03aeb0a92688cf4ac
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Sequence_SpawnOnlyStackedCube
@@ -621,7 +628,7 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: 483ba9bc75c6172969335aae2916f700
+      Hash: 809b8d808453ef3ad4768857daaf5e48
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Sequence_GameOver
@@ -733,6 +740,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: a692550a6e4396b360b46ce8d33bfcba
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AudioManager
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

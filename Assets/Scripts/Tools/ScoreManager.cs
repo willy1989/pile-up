@@ -6,6 +6,12 @@ public class ScoreManager : MonoBehaviour
 {
     public int score = 0;
 
+    public void Awake()
+    {
+        // Reset high score
+        //PlayerPrefs.SetInt("highScore", 0);
+    }
+
     public void setNewScoreHighScore()
     {
         int highScore = PlayerPrefs.GetInt("highScore",0);
