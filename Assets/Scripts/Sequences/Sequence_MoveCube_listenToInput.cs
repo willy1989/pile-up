@@ -11,17 +11,17 @@ public class Sequence_MoveCube_listenToInput : Sequence
     private bool touchDown = false;
 
 
-    public override void setUp()
+    public override void SetUp()
     {
         touchDown = false;
 
         
         
-        dataContainer.currentDestination = topCubeMover.changeDestination(dataContainer.movingCubeDestination[0]);
+        DataContainer.currentDestination = topCubeMover.ChangeDestination(DataContainer.movingCubeDestination[0]);
     }
 
 
-    public override void doAction()
+    public override void DoAction()
     {
         checkInput();
         moveCube();
@@ -30,7 +30,7 @@ public class Sequence_MoveCube_listenToInput : Sequence
     // Check each frame whether the player touched the screen down
     public void checkInput()
     {
-        if(inputManager.touchDown() == true)
+        if(inputManager.TouchDown() == true)
         {
             touchDown = true;
         }
@@ -46,32 +46,32 @@ public class Sequence_MoveCube_listenToInput : Sequence
     public void moveCube()
     {
         // Every time the moving cube reaches one of its 2 destination, the next destination becomes the other one
-        if(topCubeMover.checkIfReachedDestination(dataContainer.currentMovingCube, dataContainer.movingCubeDestination[0]) == true)
+        if(topCubeMover.CheckIfReachedDestination(DataContainer.currentMovingCube, DataContainer.movingCubeDestination[0]) == true)
         {
-            dataContainer.currentDestination = topCubeMover.changeDestination(dataContainer.movingCubeDestination[1]);
+            DataContainer.currentDestination = topCubeMover.ChangeDestination(DataContainer.movingCubeDestination[1]);
         }
 
-        else if(topCubeMover.checkIfReachedDestination(dataContainer.currentMovingCube, dataContainer.movingCubeDestination[1]) == true)
+        else if(topCubeMover.CheckIfReachedDestination(DataContainer.currentMovingCube, DataContainer.movingCubeDestination[1]) == true)
         {
-            dataContainer.currentDestination = topCubeMover.changeDestination(dataContainer.movingCubeDestination[0]);
+            DataContainer.currentDestination = topCubeMover.ChangeDestination(DataContainer.movingCubeDestination[0]);
         }
 
-        topCubeMover.moveCubeTo(dataContainer.currentMovingCube, dataContainer.currentDestination);
+        topCubeMover.MoveCubeTo(DataContainer.currentMovingCube, DataContainer.currentDestination);
     }
 
 
-    public override Sequence chooseNextSequence()
+    public override Sequence ChooseNextSequence()
     {
         if(touchDown == false)
         {
             // This sequence
-            return sequences[0];
+            return Sequences[0];
         }
 
         else
         {
             // Check cube collision
-            return sequences[1];
+            return Sequences[1];
         }
     }
 

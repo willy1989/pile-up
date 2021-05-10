@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CubeCollision : MonoBehaviour
 {
-    public bool checkCubeCollision(Vector3 overlapBoxPos, Vector3 overlapBoxScale)
+    public bool CheckCubeCollision(Vector3 overlapBoxPos, Vector3 overlapBoxScale)
     {
         Collider[] colliders = Physics.OverlapBox(overlapBoxPos, overlapBoxScale / 2);
 
@@ -30,10 +30,10 @@ public class CubeCollision : MonoBehaviour
 
     // Compare the position of the same corner of both cubes
     // to check whether they are perfectly aligned or at least very close
-    public bool checkCubesPerfectlyAligned(CubeCornerPosition topCubeData, CubeCornerPosition bottomCubeData, Vector2 currentWayPoint)
+    public bool CheckCubesPerfectlyAligned(CubeCornerPosition topCubeData, CubeCornerPosition bottomCubeData, Vector2 currentWayPoint)
     {
-        Vector2 topCubeCornerPos = new Vector2(topCubeData.getCornerPos()[0].x, topCubeData.getCornerPos()[0].z);
-        Vector2 bottomCubeCornerPos = new Vector2(bottomCubeData.getCornerPos()[0].x, bottomCubeData.getCornerPos()[0].z);
+        Vector2 topCubeCornerPos = new Vector2(topCubeData.GetCornerPos()[0].x, topCubeData.GetCornerPos()[0].z);
+        Vector2 bottomCubeCornerPos = new Vector2(bottomCubeData.GetCornerPos()[0].x, bottomCubeData.GetCornerPos()[0].z);
 
         float dist = (topCubeCornerPos - bottomCubeCornerPos).magnitude;
 
@@ -51,7 +51,7 @@ public class CubeCollision : MonoBehaviour
 
             if (topCubeCornerPos.y > bottomCubeCornerPos.y && distTopCubeWayPoint > distBottomCubeWayPoint)
             {
-                Debug.Log("X axis");
+                //Debug.Log("X axis");
                 return true;
             }
             
@@ -63,7 +63,7 @@ public class CubeCollision : MonoBehaviour
 
             else if (topCubeCornerPos.x > bottomCubeCornerPos.x && distTopCubeWayPoint > distBottomCubeWayPoint)
             {
-                Debug.Log("X axis");
+                //Debug.Log("X axis");
                 return true;
             }
 

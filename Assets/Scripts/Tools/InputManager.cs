@@ -5,7 +5,7 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
     // Checks for the player touching down the screen
-    public bool touchDown()
+    public bool TouchDown()
     {
         if (Input.touchCount > 0)
         {

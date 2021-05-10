@@ -12,38 +12,38 @@ public class Sequence_GameOver : Sequence
 
     [SerializeField] AudioManager audioManager;
 
-    public override void doAction()
+    public override void DoAction()
     {
         ui_manager.showUiElement(ui_manager.gameOverButton, true);
         //ui_manager.showUiElement(ui_manager.gameOverText, true);
-        cubeSpawner.setRigidBdtoGravity(dataContainer.currentMovingCube);
+        cubeSpawner.SetRigidBdtoGravity(DataContainer.currentMovingCube);
 
         // New high score
-        if (scoreManager.getHighScore() < scoreManager.score)
+        if (scoreManager.GetHighScore() < scoreManager.score)
         {
             ui_manager.showUiElement(ui_manager.NewHighScoreText.gameObject, true);
             ui_manager.showUiElement(ui_manager.HighScoreText.gameObject, true);
             ui_manager.showUiElement(ui_manager.ScoreText.gameObject, false);
 
-            audioManager.playSoundEffect(audioManager.newRecordSound);
+            audioManager.PlaySoundEffect(audioManager.NewRecordSound);
         }
 
-        scoreManager.setNewScoreHighScore();
-        ui_manager.updateHighScore(scoreManager.getHighScore());
+        scoreManager.SetNewScoreHighScore();
+        ui_manager.updateHighScore(scoreManager.GetHighScore());
         
 
 
     }
 
-    public override void setUp()
+    public override void SetUp()
     {
         
 
     }
 
-    public override Sequence chooseNextSequence()
+    public override Sequence ChooseNextSequence()
     {
         // This sequence
-        return sequences[0];
+        return Sequences[0];
     }
 }

@@ -9,13 +9,13 @@ public class Sequence_growCube : Sequence
     [SerializeField] AudioManager audioManager;
 
 
-    public override void setUp()
+    public override void SetUp()
     {
-        audioManager.playSoundEffect(audioManager.growCubeSound);
+        audioManager.PlaySoundEffect(audioManager.GrowCubeSound);
         growCube();
     }
 
-    public override void doAction()
+    public override void DoAction()
     {
         
             
@@ -27,7 +27,7 @@ public class Sequence_growCube : Sequence
         // Grow stacked cube
         Vector3 newScale = Vector3.zero;
 
-        if (dataContainer.movingCubeDestination[0].x > dataContainer.movingCubeDestination[0].z)
+        if (DataContainer.movingCubeDestination[0].x > DataContainer.movingCubeDestination[0].z)
         {
             newScale = new Vector3(0.05f, 0f, 0f);
         }
@@ -37,21 +37,21 @@ public class Sequence_growCube : Sequence
             newScale = new Vector3(0f, 0f, 0.05f);
         }
 
-        StartCoroutine(cubeGrower.growCubeCoroutine(newScale, dataContainer.currentBottomCube, 0.5f));
+        StartCoroutine(cubeGrower.growCubeCoroutine(newScale, DataContainer.currentBottomCube, 0.5f));
     }
 
-    public override Sequence chooseNextSequence()
+    public override Sequence ChooseNextSequence()
     {
-        if(cubeGrower.coroutineRunning == true)
+        if(cubeGrower.CoroutineRunning == true)
         {
             // Keep playing current sequence while the cube is still growing
-            return sequences[0];
+            return Sequences[0];
         }
 
         else
         {
             // Spawn moving cube
-            return sequences[1];
+            return Sequences[1];
         }
     }
 }

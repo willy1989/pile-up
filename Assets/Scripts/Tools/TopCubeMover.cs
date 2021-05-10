@@ -6,14 +6,14 @@ public class TopCubeMover : MonoBehaviour
 {
     private bool leftAxis = false;
 
-    public float speed = 1f;
+    private float speed = 1f;
 
     // Moves the moving between two waypoints
     // Sets those 2 waypoints
 
 
     // Randomly choose 2 points place either on the x or z axis
-    public Vector3[] getDestinations(Vector3 centerPos)
+    public Vector3[] GetDestinations(Vector3 centerPos)
     {
         Vector3[] destinations = new Vector3[2];
 
@@ -34,7 +34,7 @@ public class TopCubeMover : MonoBehaviour
         return destinations;
     }
 
-    public void moveCubeTo(GameObject movingCube, Vector3 destination)
+    public void MoveCubeTo(GameObject movingCube, Vector3 destination)
     {
         Vector3 direction = (destination - movingCube.transform.position).normalized;
 
@@ -42,12 +42,12 @@ public class TopCubeMover : MonoBehaviour
         movingCube.transform.position += moveVec;
     }
 
-    public Vector3 changeDestination(Vector3 newDestination)
+    public Vector3 ChangeDestination(Vector3 newDestination)
     {
         return newDestination;
     }
 
-    public bool checkIfReachedDestination(GameObject movingCube, Vector3 destination)
+    public bool CheckIfReachedDestination(GameObject movingCube, Vector3 destination)
     {
         if((destination - movingCube.transform.position).magnitude < 0.1f)
         {
@@ -60,7 +60,7 @@ public class TopCubeMover : MonoBehaviour
         }
     }
 
-    public void increaseSpeed()
+    public void IncreaseSpeed()
     {
         speed += 0.01f;
     }

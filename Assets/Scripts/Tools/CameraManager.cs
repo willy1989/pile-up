@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraManager : MonoBehaviour
 {
     // We move the oject until we reach the destination
-    public IEnumerator moveCamera(Transform objectToMove,Vector3 destination, float lerpDuration)
+    public IEnumerator MoveCamera(Transform objectToMove,Vector3 destination, float lerpDuration)
     {
         Vector3 startPos = objectToMove.transform.position;
 

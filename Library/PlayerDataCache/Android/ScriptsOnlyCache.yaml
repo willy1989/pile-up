@@ -10,6 +10,7 @@ ScriptsOnlyBuild:
     - CubeSpawner
     - CutCube_deactivate
     - DataContainer
+    - FrameRateSettings
     - InputManager
     - ParticleSystemManager
     - ScenesManager
@@ -116,33 +117,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10500}
     - Class: 114
-      Script: {instanceID: 10592}
+      Script: {instanceID: 10546}
     - Class: 114
-      Script: {instanceID: 10602}
+      Script: {instanceID: 10594}
     - Class: 114
-      Script: {instanceID: 10714}
+      Script: {instanceID: 10604}
     - Class: 114
-      Script: {instanceID: 10730}
+      Script: {instanceID: 10716}
     - Class: 114
-      Script: {instanceID: 10886}
+      Script: {instanceID: 10732}
     - Class: 114
-      Script: {instanceID: 11036}
+      Script: {instanceID: 10888}
     - Class: 114
-      Script: {instanceID: 11044}
+      Script: {instanceID: 11038}
     - Class: 114
-      Script: {instanceID: 11068}
+      Script: {instanceID: 11046}
     - Class: 114
-      Script: {instanceID: 11164}
+      Script: {instanceID: 11070}
     - Class: 114
-      Script: {instanceID: 11230}
+      Script: {instanceID: 11166}
     - Class: 114
-      Script: {instanceID: 11332}
+      Script: {instanceID: 11232}
     - Class: 114
-      Script: {instanceID: 11338}
+      Script: {instanceID: 11334}
     - Class: 114
-      Script: {instanceID: 11398}
+      Script: {instanceID: 11340}
     - Class: 114
-      Script: {instanceID: 12978}
+      Script: {instanceID: 11400}
+    - Class: 114
+      Script: {instanceID: 18724}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -472,6 +475,12 @@ ScriptsOnlyBuild:
     className: coroutineTest
   - hash:
       serializedVersion: 2
+      Hash: a692550a6e4396b360b46ce8d33bfcba
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AudioManager
+  - hash:
+      serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -742,11 +751,11 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: a692550a6e4396b360b46ce8d33bfcba
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: AudioManager
+    className: FrameRateSettings
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/willy/Documents/unity/Pile_up/build.apk
+  playerPath: C:/Users/willy/Documents/unity/Pile_up/devBuild.apk

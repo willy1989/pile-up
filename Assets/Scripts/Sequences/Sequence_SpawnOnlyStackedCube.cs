@@ -12,7 +12,7 @@ public class Sequence_SpawnOnlyStackedCube : Sequence
 
     [SerializeField] AudioManager audioManager;
 
-    public override void setUp()
+    public override void SetUp()
     {
        
     }
@@ -23,35 +23,35 @@ public class Sequence_SpawnOnlyStackedCube : Sequence
 
         // Same position as the current bottom cube + 1 Y unit above,
         // So that the stacked cube is perfecly aligned with the bottom cube
-        Vector3 spawnPos = dataContainer.currentBottomCube.transform.position + new Vector3(0f, dataContainer.currentBottomCube.transform.localScale.y, 0f);
+        Vector3 spawnPos = DataContainer.currentBottomCube.transform.position + new Vector3(0f, DataContainer.currentBottomCube.transform.localScale.y, 0f);
         GameObject stackedCube = cubeSpawner.spawnStackedCube(spawnPos);
 
-        stackedCube.GetComponent<MeshRenderer>().material = colorManager.currentMaterial;
+        stackedCube.GetComponent<MeshRenderer>().material = colorManager.CurrentMaterial;
 
         // Scale stacked cube
-        cubeSpawner.setCubeScale(stackedCube, dataContainer.currentBottomCube.transform.localScale);
+        cubeSpawner.SetCubeScale(stackedCube, DataContainer.currentBottomCube.transform.localScale);
 
         // Update combo count
         // Only grow the stacked cube when the player stacked 5 cubes perfectly in a row
-        dataContainer.comboCount++;
+        DataContainer.comboCount++;
 
         // Particle system effect
-        particleSystemManager.playStackParticleEffect(stackedCube, dataContainer.comboCount);
+        particleSystemManager.PlayStackParticleEffect(stackedCube, DataContainer.comboCount);
 
 
         // Update references
-        dataContainer.currentBottomCube = stackedCube;
+        DataContainer.currentBottomCube = stackedCube;
 
-        GameObject.Destroy(dataContainer.currentMovingCube);
+        GameObject.Destroy(DataContainer.currentMovingCube);
 
-        dataContainer.currentMovingCube = null;
+        DataContainer.currentMovingCube = null;
     }
 
     private bool checkGrowCube()
     {
-        if (dataContainer.comboCount >= 5)
+        if (DataContainer.comboCount >= 5)
         {
-            dataContainer.comboCount = 0;
+            DataContainer.comboCount = 0;
             return true;
         }
 
@@ -61,26 +61,26 @@ public class Sequence_SpawnOnlyStackedCube : Sequence
         }
     }
 
-    public override void doAction()
+    public override void DoAction()
     {
         spawnCube();
         // Play stack sound effect
-        audioManager.playSoundEffect(audioManager.perfectlyStackSound);
+        audioManager.PlaySoundEffect(audioManager.PerfectlyStackSound);
     }
 
-    public override Sequence chooseNextSequence()
+    public override Sequence ChooseNextSequence()
     {
         // Grow cube
         if (checkGrowCube() == true)
         {
-            return sequences[0];
+            return Sequences[0];
         }
             
 
         // Spawn moving cube, the game loop restarts
         else
         {
-            return sequences[1];
+            return Sequences[1];
         }
             
         

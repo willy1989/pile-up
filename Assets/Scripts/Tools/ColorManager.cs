@@ -15,46 +15,36 @@ public class ColorManager : MonoBehaviour
 
     private int groupIndex;
 
-    public Material currentMaterial;
+    public Material CurrentMaterial;
 
-    public void changeMaterial()
+    public void ChangeMaterial()
     {
-        currentMaterial = getNextMaterial();
-    }
-
-    public Material getNextMaterial()
-    {
-        getNextIndex();
-
-        if(index == 0)
-        {
-            getRandomGroupIndex();
-        }
-
-        return materials[groupIndex*7 + index];
-    }
-
-    public void getNextIndex()
-    {
+        // Get next index, it always goes from 1 to 6
         index++;
 
         index = index % 7;
-    }
 
-    public void getRandomGroupIndex()
-    {
-        int randNum = Random.Range(0, materials.Length/7);
-
-        //Debug.Log("randNum =" + randNum);
-
-        // Iterate until the new current group index is different from the current one
-        while (randNum == groupIndex)
+        // When a new cycle starts, get a new random group of materials
+        if (index == 0)
         {
-            randNum = Random.Range(0, materials.Length / 7);
+            int randNum = Random.Range(0, materials.Length / 7);
+
+            // Iterate until the new current group index is different from the current one
+            while (randNum == groupIndex)
+            {
+                randNum = Random.Range(0, materials.Length / 7);
+            }
+
+            groupIndex = randNum;
         }
 
-        groupIndex = randNum;
+        // Based on the current index and the current group set the current material 
+
+        CurrentMaterial = materials[groupIndex * 7 + index];
     }
+
+
+
 
 
     

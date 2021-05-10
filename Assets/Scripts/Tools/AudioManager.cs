@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public AudioClip stackSound;
+    public AudioClip StackSound;
 
-    public AudioClip perfectlyStackSound;
+    public AudioClip PerfectlyStackSound;
 
-    public AudioClip growCubeSound;
+    public AudioClip GrowCubeSound;
 
-    public AudioClip newRecordSound;
+    public AudioClip NewRecordSound;
 
     [SerializeField] AudioSource audioSource;
 
 
-    public void playSoundEffect(AudioClip clip)
+    public void PlaySoundEffect(AudioClip clip)
     {
         audioSource.clip = clip;
 

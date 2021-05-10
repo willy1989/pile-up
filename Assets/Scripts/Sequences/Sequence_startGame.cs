@@ -18,15 +18,15 @@ public class Sequence_startGame : Sequence
     // Check each frame whether the player touched the screen down
     public void checkInput()
     {
-        touchDown = inputManager.touchDown();
+        touchDown = inputManager.TouchDown();
     }
 
-    public override void setUp()
+    public override void SetUp()
     {
         touchDown = false;
     }
 
-    public override void doAction()
+    public override void DoAction()
     {
         checkInput();
         if(touchDown == true)
@@ -38,18 +38,18 @@ public class Sequence_startGame : Sequence
         
     }
 
-    public override Sequence chooseNextSequence()
+    public override Sequence ChooseNextSequence()
     {
         if (touchDown == false)
         {
             // This sequence
-            return sequences[0];
+            return Sequences[0];
         }
 
         else
         {
             // Spawn moving cube
-            return sequences[1];
+            return Sequences[1];
         }
     }
 

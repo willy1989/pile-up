@@ -19,7 +19,7 @@ public class CubeSpawner : MonoBehaviour
     }
 
     // We only spawn the cut cubes once, and reuse it every time a new cube is stacked. It acts as an animation.
-    public void populateCutCubePool(int cutCubeNumber)
+    private void populateCutCubePool(int cutCubeNumber)
     {
         cutCubePool = new GameObject[cutCubeNumber];
 
@@ -41,11 +41,6 @@ public class CubeSpawner : MonoBehaviour
         cutCubePoolIndex = cutCubePoolIndex % cutCubePool.Length;
     }
 
-    private GameObject getCurrentCutCube()
-    {
-        return cutCubePool[cutCubePoolIndex];
-    }
-
     // Based on the position of the top and bottom cubes, choose a different spawning method
     // Returns the stackcube
     public GameObject[] chooseSpawningMethod(GameObject _topCube, GameObject _bottomCube)
@@ -55,8 +50,8 @@ public class CubeSpawner : MonoBehaviour
 
         GameObject[] cubes = new GameObject[2];
 
-        Vector3[] TCData = topCube.GetComponent<CubeCornerPosition>().getCornerPos();
-        Vector3[] BCData = bottomCube.GetComponent<CubeCornerPosition>().getCornerPos();
+        Vector3[] TCData = topCube.GetComponent<CubeCornerPosition>().GetCornerPos();
+        Vector3[] BCData = bottomCube.GetComponent<CubeCornerPosition>().GetCornerPos();
 
         if (TCData[0].z == BCData[0].z)
         {
@@ -96,7 +91,7 @@ public class CubeSpawner : MonoBehaviour
     public GameObject spawnCutCube(Vector3 cutCubePos)
     {
         incrementCutCubeIndex();
-        GameObject cutCube = getCurrentCutCube();
+        GameObject cutCube = cutCubePool[cutCubePoolIndex];
         cutCube.SetActive(true);
         cutCube.GetComponent<Rigidbody>().velocity = Vector3.zero;
         cutCube.transform.position = cutCubePos;
@@ -131,8 +126,8 @@ public class CubeSpawner : MonoBehaviour
 
         // Change scales of new cubes
         stackedCube.transform.localScale = new Vector3(topCube.transform.localScale.x, topCube.transform.localScale.y, stackedWidth);
-        getCurrentCutCube().transform.localScale = new Vector3(topCube.transform.localScale.x, topCube.transform.localScale.y, cutWidth);
-        getCurrentCutCube().transform.rotation = Quaternion.identity;
+        cutCubePool[cutCubePoolIndex].transform.localScale = new Vector3(topCube.transform.localScale.x, topCube.transform.localScale.y, cutWidth);
+        cutCubePool[cutCubePoolIndex].transform.rotation = Quaternion.identity;
         return new GameObject[] { stackedCube, cutCube };
     }
 
@@ -156,8 +151,8 @@ public class CubeSpawner : MonoBehaviour
 
         // Change scales of new cubes
         stackedCube.transform.localScale = new Vector3(stackedWidth, topCube.transform.localScale.y, topCube.transform.localScale.z);
-        getCurrentCutCube().transform.localScale = new Vector3(cutWidth, topCube.transform.localScale.y, topCube.transform.localScale.z);
-        getCurrentCutCube().transform.rotation = Quaternion.identity;
+        cutCubePool[cutCubePoolIndex].transform.localScale = new Vector3(cutWidth, topCube.transform.localScale.y, topCube.transform.localScale.z);
+        cutCubePool[cutCubePoolIndex].transform.rotation = Quaternion.identity;
         return new GameObject[] { stackedCube, cutCube };
     }
 
@@ -175,14 +170,14 @@ public class CubeSpawner : MonoBehaviour
     }
 
 
-    public void setRigidBdtoGravity(GameObject go)
+    public void SetRigidBdtoGravity(GameObject go)
     {
         Rigidbody rb = go.GetComponent<Rigidbody>();
         rb.isKinematic = false;
         rb.useGravity = true;
     }
 
-    public void setCubeScale(GameObject cubeToChange, Vector3 newScale)
+    public void SetCubeScale(GameObject cubeToChange, Vector3 newScale)
     {
         cubeToChange.transform.localScale = newScale;
     }
