@@ -815,13 +815,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01e1a6c7acfc3d14da610f505f1255da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentBottomCube: {fileID: 1769757792}
-  currentMovingCube: {fileID: 0}
-  movingCubeDestination: []
-  currentDestination: {x: 0, y: 0, z: 0}
-  cam: {fileID: 963194228}
-  distCamBottomCube: {x: 0, y: 0, z: 0}
-  comboCount: 0
+  CurrentBottomCube: {fileID: 1769757792}
+  CurrentMovingCube: {fileID: 0}
+  MovingCubeDestination: []
+  CurrentDestination: {x: 0, y: 0, z: 0}
+  Cam: {fileID: 0}
+  ComboCount: 0
 --- !u!1 &729121546
 GameObject:
   m_ObjectHideFlags: 0
@@ -11460,6 +11459,7 @@ MonoBehaviour:
   - {fileID: 1751466732}
   scoreManager: {fileID: 2119743290}
   ui_manager: {fileID: 1731101681}
+  cameraManager: {fileID: 186193098}
 --- !u!1 &1256399633
 GameObject:
   m_ObjectHideFlags: 0
@@ -21606,7 +21606,7 @@ PrefabInstance:
     - target: {fileID: 4041903311766470935, guid: 99c464f5b5678c6468ebe427501f8daa,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.041
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4041903311766470935, guid: 99c464f5b5678c6468ebe427501f8daa,
         type: 3}

@@ -27,7 +27,7 @@ public class Sequence_growCube : Sequence
         // Grow stacked cube
         Vector3 newScale = Vector3.zero;
 
-        if (DataContainer.movingCubeDestination[0].x > DataContainer.movingCubeDestination[0].z)
+        if (DataContainer.MovingCubeDestination[0].x > DataContainer.MovingCubeDestination[0].z)
         {
             newScale = new Vector3(0.05f, 0f, 0f);
         }
@@ -37,7 +37,7 @@ public class Sequence_growCube : Sequence
             newScale = new Vector3(0f, 0f, 0.05f);
         }
 
-        StartCoroutine(cubeGrower.growCubeCoroutine(newScale, DataContainer.currentBottomCube, 0.5f));
+        StartCoroutine(cubeGrower.growCubeCoroutine(newScale, DataContainer.CurrentBottomCube, 0.5f));
     }
 
     public override Sequence ChooseNextSequence()

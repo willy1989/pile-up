@@ -8,6 +8,15 @@ public class CameraManager : MonoBehaviour
 
     [SerializeField] Camera cam;
 
+    // When moving the camera. We add this distance to the destination to maintain the same distance of the current bottom cube from the camera
+    // We assume the first bottom cube is always at the origin (0,0,0)
+    private Vector3 distCamBottomCube; 
+
+    private void Awake()
+    {
+        distCamBottomCube = cam.transform.position;
+    }
+
     public void MoveCamera(Vector3 destination, float lerpDuration)
     {
         // If the camera is still moving while the player stacked a new cube, 
@@ -26,6 +35,8 @@ public class CameraManager : MonoBehaviour
     private IEnumerator moveCameraCoroutine(Vector3 destination, float lerpDuration)
     {
         Vector3 startPos = cam.transform.position;
+
+        destination += distCamBottomCube;
 
         float lerpTime = 0f;
 

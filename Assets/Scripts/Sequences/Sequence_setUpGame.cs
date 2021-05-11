@@ -8,6 +8,7 @@ public class Sequence_setUpGame : Sequence
 
     [SerializeField] UI_manager ui_manager;
 
+    [SerializeField] CameraManager cameraManager;
 
     public override void SetUp()
     {
@@ -16,10 +17,7 @@ public class Sequence_setUpGame : Sequence
 
     public override void DoAction()
     {
-        //Debug.Log("setup Sequence_gameStarts");
-
         // Set up camera distance
-        DataContainer.distCamBottomCube = DataContainer.cam.position - DataContainer.currentBottomCube.transform.position;
         ui_manager.updateHighScore(scoreManager.GetHighScore());
     }
 

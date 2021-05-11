@@ -23,35 +23,35 @@ public class Sequence_SpawnOnlyStackedCube : Sequence
 
         // Same position as the current bottom cube + 1 Y unit above,
         // So that the stacked cube is perfecly aligned with the bottom cube
-        Vector3 spawnPos = DataContainer.currentBottomCube.transform.position + new Vector3(0f, DataContainer.currentBottomCube.transform.localScale.y, 0f);
+        Vector3 spawnPos = DataContainer.CurrentBottomCube.transform.position + new Vector3(0f, DataContainer.CurrentBottomCube.transform.localScale.y, 0f);
         GameObject stackedCube = cubeSpawner.spawnStackedCube(spawnPos);
 
         stackedCube.GetComponent<MeshRenderer>().material = colorManager.CurrentMaterial;
 
         // Scale stacked cube
-        cubeSpawner.SetCubeScale(stackedCube, DataContainer.currentBottomCube.transform.localScale);
+        cubeSpawner.SetCubeScale(stackedCube, DataContainer.CurrentBottomCube.transform.localScale);
 
         // Update combo count
         // Only grow the stacked cube when the player stacked 5 cubes perfectly in a row
-        DataContainer.comboCount++;
+        DataContainer.ComboCount++;
 
         // Particle system effect
-        particleSystemManager.PlayStackParticleEffect(stackedCube, DataContainer.comboCount);
+        particleSystemManager.PlayStackParticleEffect(stackedCube, DataContainer.ComboCount);
 
 
         // Update references
-        DataContainer.currentBottomCube = stackedCube;
+        DataContainer.CurrentBottomCube = stackedCube;
 
-        GameObject.Destroy(DataContainer.currentMovingCube);
+        GameObject.Destroy(DataContainer.CurrentMovingCube);
 
-        DataContainer.currentMovingCube = null;
+        DataContainer.CurrentMovingCube = null;
     }
 
     private bool checkGrowCube()
     {
-        if (DataContainer.comboCount >= 5)
+        if (DataContainer.ComboCount >= 5)
         {
-            DataContainer.comboCount = 0;
+            DataContainer.ComboCount = 0;
             return true;
         }
 

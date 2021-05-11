@@ -18,9 +18,9 @@ public class Sequence_checkStackCubeCollision : Sequence
 
     public override Sequence ChooseNextSequence()
     {
-        bool touchBottomCube = cubeCollision.CheckCubeCollision(DataContainer.currentMovingCube.transform.position, DataContainer.currentBottomCube.transform.localScale);
+        bool touchBottomCube = cubeCollision.CheckCubeCollision(DataContainer.CurrentMovingCube.transform.position, DataContainer.CurrentBottomCube.transform.localScale);
 
-        bool cubesPerfectlyAligned = cubeCollision.CheckCubesPerfectlyAligned(DataContainer.currentMovingCube.GetComponent<CubeCornerPosition>(), DataContainer.currentBottomCube.GetComponent<CubeCornerPosition>(),new Vector2(DataContainer.currentDestination.x, DataContainer.currentDestination.z));
+        bool cubesPerfectlyAligned = cubeCollision.CheckCubesPerfectlyAligned(DataContainer.CurrentMovingCube.GetComponent<CubeCornerPosition>(), DataContainer.CurrentBottomCube.GetComponent<CubeCornerPosition>(),new Vector2(DataContainer.CurrentDestination.x, DataContainer.CurrentDestination.z));
 
         if (cubesPerfectlyAligned == true)
         {

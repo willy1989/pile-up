@@ -21,25 +21,23 @@ public class Sequence_SpawnMovingCube : Sequence
         // Set data container's moving cube reference
 
         // We define the waypoints of the moving cube
-        DataContainer.movingCubeDestination = topCubeMover.GetDestinations(DataContainer.currentBottomCube.transform.position + new Vector3(0f, DataContainer.currentBottomCube.transform.lossyScale.y, 0f));
+        DataContainer.MovingCubeDestination = topCubeMover.GetDestinations(DataContainer.CurrentBottomCube.transform.position + new Vector3(0f, DataContainer.CurrentBottomCube.transform.lossyScale.y, 0f));
 
         // The moving cube is spawned on one of its waypoints
-        Vector3 spawnPos = DataContainer.movingCubeDestination[0];
+        Vector3 spawnPos = DataContainer.MovingCubeDestination[0];
 
         topCubeMover.IncreaseSpeed();
 
         // Spawn moving cube
-        DataContainer.currentMovingCube = cubeSpawner.spawnMovingCube(spawnPos, DataContainer.currentBottomCube.transform.localScale);
+        DataContainer.CurrentMovingCube = cubeSpawner.spawnMovingCube(spawnPos, DataContainer.CurrentBottomCube.transform.localScale);
 
         // Change color
         colorManager.ChangeMaterial();
-        DataContainer.currentMovingCube.GetComponent<MeshRenderer>().material = colorManager.CurrentMaterial;
-
-        
+        DataContainer.CurrentMovingCube.GetComponent<MeshRenderer>().material = colorManager.CurrentMaterial;
 
         // Raise camera
 
-        Vector3 camDestination = DataContainer.currentBottomCube.transform.position + DataContainer.distCamBottomCube;
+        Vector3 camDestination = DataContainer.CurrentBottomCube.transform.position;
 
 
         // If the camera is still moving while the player stacked a new cube, 

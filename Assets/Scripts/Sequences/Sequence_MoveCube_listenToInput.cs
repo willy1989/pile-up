@@ -17,7 +17,7 @@ public class Sequence_MoveCube_listenToInput : Sequence
 
         
         
-        DataContainer.currentDestination = topCubeMover.ChangeDestination(DataContainer.movingCubeDestination[0]);
+        DataContainer.CurrentDestination = topCubeMover.ChangeDestination(DataContainer.MovingCubeDestination[0]);
     }
 
 
@@ -46,17 +46,17 @@ public class Sequence_MoveCube_listenToInput : Sequence
     public void moveCube()
     {
         // Every time the moving cube reaches one of its 2 destination, the next destination becomes the other one
-        if(topCubeMover.CheckIfReachedDestination(DataContainer.currentMovingCube, DataContainer.movingCubeDestination[0]) == true)
+        if(topCubeMover.CheckIfReachedDestination(DataContainer.CurrentMovingCube, DataContainer.MovingCubeDestination[0]) == true)
         {
-            DataContainer.currentDestination = topCubeMover.ChangeDestination(DataContainer.movingCubeDestination[1]);
+            DataContainer.CurrentDestination = topCubeMover.ChangeDestination(DataContainer.MovingCubeDestination[1]);
         }
 
-        else if(topCubeMover.CheckIfReachedDestination(DataContainer.currentMovingCube, DataContainer.movingCubeDestination[1]) == true)
+        else if(topCubeMover.CheckIfReachedDestination(DataContainer.CurrentMovingCube, DataContainer.MovingCubeDestination[1]) == true)
         {
-            DataContainer.currentDestination = topCubeMover.ChangeDestination(DataContainer.movingCubeDestination[0]);
+            DataContainer.CurrentDestination = topCubeMover.ChangeDestination(DataContainer.MovingCubeDestination[0]);
         }
 
-        topCubeMover.MoveCubeTo(DataContainer.currentMovingCube, DataContainer.currentDestination);
+        topCubeMover.MoveCubeTo(DataContainer.CurrentMovingCube, DataContainer.CurrentDestination);
     }
 
 

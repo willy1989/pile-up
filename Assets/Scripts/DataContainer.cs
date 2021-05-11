@@ -4,19 +4,17 @@ using UnityEngine;
 
 public class DataContainer : MonoBehaviour
 {
-    public GameObject currentBottomCube;
+    public GameObject CurrentBottomCube;
 
-    public GameObject currentMovingCube;
+    public GameObject CurrentMovingCube;
 
-    public Vector3[] movingCubeDestination;
+    public Vector3[] MovingCubeDestination;
 
-    public Vector3 currentDestination;
+    public Vector3 CurrentDestination;
 
-    public Transform cam;
+    public Transform Cam;
 
-    public Vector3 distCamBottomCube;
-
-    public int comboCount = 0;
+    public int ComboCount = 0;
 }
 
 
