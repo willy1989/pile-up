@@ -41,10 +41,6 @@ public class CubeGrower : MonoBehaviour
 
         while (elapsedTime / duration  < 1f)
         {
-            //Debug.Log("growCubeCoroutine running");
-
-            //Debug.Log("elapsedTime / duration =" + elapsedTime / duration);
-
             goToScale.transform.position = Vector3.Lerp(startPos, finalPos, elapsedTime / duration);
 
             goToScale.transform.localScale = Vector3.Lerp(startScale, finalScale, elapsedTime / duration);

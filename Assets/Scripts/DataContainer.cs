@@ -8,8 +8,6 @@ public class DataContainer : MonoBehaviour
 
     public GameObject currentMovingCube;
 
-    //public GameObject currentTopCube;
-
     public Vector3[] movingCubeDestination;
 
     public Vector3 currentDestination;
@@ -18,11 +16,7 @@ public class DataContainer : MonoBehaviour
 
     public Vector3 distCamBottomCube;
 
-    public IEnumerator moveCamCoroutine;
-
     public int comboCount = 0;
-
-   
 }
 
 

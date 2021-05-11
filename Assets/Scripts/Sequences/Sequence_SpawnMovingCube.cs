@@ -44,12 +44,8 @@ public class Sequence_SpawnMovingCube : Sequence
 
         // If the camera is still moving while the player stacked a new cube, 
         // we stop the current coroutine before starting a new one
-        if (DataContainer.moveCamCoroutine != null)
-            StopCoroutine(DataContainer.moveCamCoroutine);
 
-        DataContainer.moveCamCoroutine = cameraManager.MoveCamera(DataContainer.cam, camDestination, 0.75f);
-
-        StartCoroutine(DataContainer.moveCamCoroutine);
+        cameraManager.MoveCamera(camDestination, 0.75f);
     }
 
     public override Sequence ChooseNextSequence()

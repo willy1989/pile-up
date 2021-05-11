@@ -8,6 +8,8 @@ public class TopCubeMover : MonoBehaviour
 
     private float speed = 1f;
 
+
+
     // Moves the moving between two waypoints
     // Sets those 2 waypoints
 
