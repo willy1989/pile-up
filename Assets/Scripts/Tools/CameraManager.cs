@@ -17,7 +17,7 @@ public class CameraManager : MonoBehaviour
         distCamBottomCube = cam.transform.position;
     }
 
-    public void MoveCamera(Vector3 destination, float lerpDuration)
+    public void MoveCamera()
     {
         // If the camera is still moving while the player stacked a new cube, 
         // we stop the current coroutine before starting a new one
@@ -26,17 +26,19 @@ public class CameraManager : MonoBehaviour
             StopCoroutine(moveCamCoroutine);
         }
 
-        moveCamCoroutine = moveCameraCoroutine(destination, lerpDuration);
+        moveCamCoroutine = moveCameraCoroutine();
 
         StartCoroutine(moveCamCoroutine);
     }
 
     // We move the oject until we reach the destination
-    private IEnumerator moveCameraCoroutine(Vector3 destination, float lerpDuration)
+    private IEnumerator moveCameraCoroutine()
     {
         Vector3 startPos = cam.transform.position;
 
-        destination += distCamBottomCube;
+        Vector3 destination = DataContainer.Instance.CurrentBottomCube.transform.position + distCamBottomCube;
+
+        float lerpDuration = 0.75f;
 
         float lerpTime = 0f;
 

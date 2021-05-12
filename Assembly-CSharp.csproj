@@ -67,7 +67,6 @@
     <Compile Include="Assets\Scripts\CutCube_deactivate.cs" />
     <Compile Include="Assets\Scripts\DataContainer.cs" />
     <Compile Include="Assets\Scripts\FrameRateSettings.cs" />
-    <Compile Include="Assets\Scripts\gravityTest.cs" />
     <Compile Include="Assets\Scripts\Sequences\Sequence.cs" />
     <Compile Include="Assets\Scripts\Sequences\Sequence_checkStackCubeCollision.cs" />
     <Compile Include="Assets\Scripts\Sequences\Sequence_GameOver.cs" />

@@ -18,22 +18,19 @@ public class Sequence_spawnStackedCutCubes : Sequence
 
     public override void DoAction()
     {
-        GameObject[] cubes = cubeSpawner.chooseSpawningMethod(DataContainer.CurrentMovingCube, DataContainer.CurrentBottomCube);
+        GameObject[] cubes = cubeSpawner.SpawnStackAndCutCubes();
 
         GameObject stackedCube = cubes[0];
         GameObject cutCube = cubes[1];
 
-        DataContainer.CurrentBottomCube = stackedCube;
+        DataContainer.Instance.CurrentBottomCube = stackedCube;
 
         stackedCube.GetComponent<MeshRenderer>().material = colormanager.CurrentMaterial;
         cutCube.GetComponent<MeshRenderer>().material = colormanager.CurrentMaterial;
 
-
-        // Reset combo manager
         // Since the player didn't stack the current stacked cube perfectly, we reset the combo count
-        DataContainer.ComboCount = 0;
+        DataContainer.Instance.ComboCount = 0;
 
-        // Play stack sound effect
         audioManager.PlaySoundEffect(audioManager.StackSound);
     }
 

@@ -8,7 +8,7 @@ public class Sequence_checkStackCubeCollision : Sequence
 
     public override void DoAction()
     {
-        //Debug.Log("Top and bottom cube are perfectly aligned = " + cubeCollision.checkCubesPerfectlyAligned(dataContainer.currentMovingCube.GetComponent<CubeCornerPosition>(), dataContainer.currentBottomCube.GetComponent<CubeCornerPosition>()));
+        
     }
 
     public override void SetUp()
@@ -18,9 +18,9 @@ public class Sequence_checkStackCubeCollision : Sequence
 
     public override Sequence ChooseNextSequence()
     {
-        bool touchBottomCube = cubeCollision.CheckCubeCollision(DataContainer.CurrentMovingCube.transform.position, DataContainer.CurrentBottomCube.transform.localScale);
+        bool touchBottomCube = cubeCollision.CheckCubeCollision(DataContainer.Instance.CurrentMovingCube.transform.position, DataContainer.Instance.CurrentBottomCube.transform.localScale);
 
-        bool cubesPerfectlyAligned = cubeCollision.CheckCubesPerfectlyAligned(DataContainer.CurrentMovingCube.GetComponent<CubeCornerPosition>(), DataContainer.CurrentBottomCube.GetComponent<CubeCornerPosition>(),new Vector2(DataContainer.CurrentDestination.x, DataContainer.CurrentDestination.z));
+        bool cubesPerfectlyAligned = cubeCollision.CheckCubesPerfectlyAligned(DataContainer.Instance.CurrentMovingCube.GetComponent<CubeCornerPosition>(), DataContainer.Instance.CurrentBottomCube.GetComponent<CubeCornerPosition>(),new Vector2(DataContainer.Instance.CurrentDestination.x, DataContainer.Instance.CurrentDestination.z));
 
         if (cubesPerfectlyAligned == true)
         {

@@ -15,8 +15,7 @@ public class Sequence_GameOver : Sequence
     public override void DoAction()
     {
         ui_manager.showUiElement(ui_manager.gameOverButton, true);
-        //ui_manager.showUiElement(ui_manager.gameOverText, true);
-        cubeSpawner.SetRigidBdtoGravity(DataContainer.CurrentMovingCube);
+        cubeSpawner.SetRigidBdtoGravity(DataContainer.Instance.CurrentMovingCube);
 
         // New high score
         if (scoreManager.GetHighScore() < scoreManager.score)
@@ -30,15 +29,11 @@ public class Sequence_GameOver : Sequence
 
         scoreManager.SetNewScoreHighScore();
         ui_manager.updateHighScore(scoreManager.GetHighScore());
-        
-
-
     }
 
     public override void SetUp()
     {
-        
-
+        //
     }
 
     public override Sequence ChooseNextSequence()

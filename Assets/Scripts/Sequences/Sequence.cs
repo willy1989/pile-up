@@ -4,8 +4,6 @@ using UnityEngine;
 
 public abstract class Sequence : MonoBehaviour
 {
-    public DataContainer DataContainer;
-
     public Sequence[] Sequences;
 
     public abstract void DoAction();
