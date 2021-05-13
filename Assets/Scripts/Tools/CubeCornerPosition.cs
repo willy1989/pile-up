@@ -5,7 +5,7 @@ using UnityEngine;
 public class CubeCornerPosition : MonoBehaviour
 {
     
-    public Vector3[] getCornerPos()
+    public Vector3[] GetCornerPos()
     {
         Vector3[] corners = new Vector3[8];
 

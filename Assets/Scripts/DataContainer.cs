@@ -4,25 +4,32 @@ using UnityEngine;
 
 public class DataContainer : MonoBehaviour
 {
-    public GameObject currentBottomCube;
+    public static DataContainer Instance;
 
-    public GameObject currentMovingCube;
+    public void Awake()
+    {
+        if(Instance == null)
+        {
+            Instance = this;
+        }
 
-    //public GameObject currentTopCube;
+        else if(Instance != this)
+        {
+            Destroy(gameObject);
+        }
+    }
 
-    public Vector3[] movingCubeDestination;
+    public GameObject CurrentBottomCube;
 
-    public Vector3 currentDestination;
+    public GameObject CurrentMovingCube;
 
-    public Transform cam;
+    public Vector3[] MovingCubeDestination;
 
-    public Vector3 distCamBottomCube;
+    public Vector3 CurrentDestination;
 
-    public IEnumerator moveCamCoroutine;
+    public Transform Cam;
 
-    public int comboCount = 0;
-
-   
+    public int ComboCount = 0;
 }
 
 

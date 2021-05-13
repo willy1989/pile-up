@@ -6,38 +6,38 @@ public class Sequence_checkStackCubeCollision : Sequence
 {
     [SerializeField] CubeCollision cubeCollision;
 
-    public override void doAction()
+    public override void DoAction()
     {
-        //Debug.Log("Top and bottom cube are perfectly aligned = " + cubeCollision.checkCubesPerfectlyAligned(dataContainer.currentMovingCube.GetComponent<CubeCornerPosition>(), dataContainer.currentBottomCube.GetComponent<CubeCornerPosition>()));
+        
     }
 
-    public override void setUp()
+    public override void SetUp()
     {
 
     }
 
-    public override Sequence chooseNextSequence()
+    public override Sequence ChooseNextSequence()
     {
-        bool touchBottomCube = cubeCollision.checkCubeCollision(dataContainer.currentMovingCube.transform.position, dataContainer.currentBottomCube.transform.localScale);
+        bool touchBottomCube = cubeCollision.CheckCubeCollision(DataContainer.Instance.CurrentMovingCube.transform.position, DataContainer.Instance.CurrentBottomCube.transform.localScale);
 
-        bool cubesPerfectlyAligned = cubeCollision.checkCubesPerfectlyAligned(dataContainer.currentMovingCube.GetComponent<CubeCornerPosition>(), dataContainer.currentBottomCube.GetComponent<CubeCornerPosition>(),new Vector2(dataContainer.currentDestination.x, dataContainer.currentDestination.z));
+        bool cubesPerfectlyAligned = cubeCollision.CheckCubesPerfectlyAligned(DataContainer.Instance.CurrentMovingCube.GetComponent<CubeCornerPosition>(), DataContainer.Instance.CurrentBottomCube.GetComponent<CubeCornerPosition>(),new Vector2(DataContainer.Instance.CurrentDestination.x, DataContainer.Instance.CurrentDestination.z));
 
         if (cubesPerfectlyAligned == true)
         {
             // Only spawn stacked cube
-            return sequences[2];
+            return Sequences[2];
         }
 
         else if(touchBottomCube == true)
         {
             // Spawn cut and stacked cubes
-            return sequences[1];
+            return Sequences[1];
         }
 
         else
         {
             // Game over 
-            return sequences[0];
+            return Sequences[0];
         }
     }
 }

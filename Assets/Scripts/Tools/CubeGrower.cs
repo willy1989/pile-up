@@ -4,7 +4,20 @@ using UnityEngine;
 
 public class CubeGrower : MonoBehaviour
 {
-    public bool coroutineRunning = false;
+    private bool _coroutineRunning = false;
+
+    public bool CoroutineRunning
+    {
+        get
+        {
+            return _coroutineRunning;
+        }
+
+        private set
+        {
+            _coroutineRunning = value;
+        }
+    }
 
     public void growCube (Vector3 scaleToAdd, GameObject goToScale)
     {
@@ -14,7 +27,7 @@ public class CubeGrower : MonoBehaviour
 
     public IEnumerator growCubeCoroutine(Vector3 scaleToAdd, GameObject goToScale, float duration)
     {
-        coroutineRunning = true;
+        CoroutineRunning = true;
 
         float elapsedTime = 0f;
 
@@ -28,10 +41,6 @@ public class CubeGrower : MonoBehaviour
 
         while (elapsedTime / duration  < 1f)
         {
-            //Debug.Log("growCubeCoroutine running");
-
-            //Debug.Log("elapsedTime / duration =" + elapsedTime / duration);
-
             goToScale.transform.position = Vector3.Lerp(startPos, finalPos, elapsedTime / duration);
 
             goToScale.transform.localScale = Vector3.Lerp(startScale, finalScale, elapsedTime / duration);
@@ -41,6 +50,6 @@ public class CubeGrower : MonoBehaviour
             yield return null;
         }
 
-        coroutineRunning = false;
+        CoroutineRunning = false;
     }
 }

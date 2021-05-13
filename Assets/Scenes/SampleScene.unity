@@ -341,8 +341,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a3ee67d912bf74c83178f24c27290d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataContainer: {fileID: 708834532}
-  sequences:
+  DataContainer: {fileID: 708834532}
+  Sequences:
   - {fileID: 175811651}
   - {fileID: 1236949028}
   cubeGrower: {fileID: 784980883}
@@ -390,6 +390,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef2e141579ca1ad45809b59787ebe71a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 963194227}
+--- !u!1 &223974226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 223974228}
+  - component: {fileID: 223974227}
+  m_Layer: 0
+  m_Name: Frame rate settings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &223974227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223974226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 408f3e27c38cd144a9a61b42962e0c05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &223974228
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223974226}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &391081267
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,8 +554,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 332bf4edb00caca41af13458083ee3ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataContainer: {fileID: 708834532}
-  sequences:
+  DataContainer: {fileID: 708834532}
+  Sequences:
   - {fileID: 605162185}
   ui_manager: {fileID: 1731101681}
   cubeSpawner: {fileID: 104294956}
@@ -771,13 +815,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01e1a6c7acfc3d14da610f505f1255da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentBottomCube: {fileID: 1769757792}
-  currentMovingCube: {fileID: 0}
-  movingCubeDestination: []
-  currentDestination: {x: 0, y: 0, z: 0}
-  cam: {fileID: 963194228}
-  distCamBottomCube: {x: 0, y: 0, z: 0}
-  comboCount: 0
+  CurrentBottomCube: {fileID: 1769757792}
+  CurrentMovingCube: {fileID: 0}
+  MovingCubeDestination: []
+  CurrentDestination: {x: 0, y: 0, z: 0}
+  Cam: {fileID: 0}
+  ComboCount: 0
 --- !u!1 &729121546
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,7 +941,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4871dfb75b352004a9188b0affcffda9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coroutineRunning: 0
 --- !u!1 &850852035
 GameObject:
   m_ObjectHideFlags: 0
@@ -5708,7 +5750,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
@@ -5999,8 +6041,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46602d350f077964cb730520ea58919e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataContainer: {fileID: 708834532}
-  sequences:
+  DataContainer: {fileID: 708834532}
+  Sequences:
   - {fileID: 1042976530}
   - {fileID: 1900697938}
   inputManager: {fileID: 2091128565}
@@ -6145,10 +6187,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dcf14489c75a024ea024eea8258863d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stackSound: {fileID: 8300000, guid: b43d102aac6b145468dcaa94a5cccae1, type: 3}
-  perfectlyStackSound: {fileID: 8300000, guid: 657578e4be6b64dbf9b09deada272e55, type: 3}
-  growCubeSound: {fileID: 8300000, guid: 79e6baad2fd414b82a6d49ce1568d2e5, type: 3}
-  newRecordSound: {fileID: 8300000, guid: 7478151cf36724a7dada558f746c3633, type: 3}
+  StackSound: {fileID: 0}
+  PerfectlyStackSound: {fileID: 0}
+  GrowCubeSound: {fileID: 0}
+  NewRecordSound: {fileID: 0}
   audioSource: {fileID: 1139238966}
 --- !u!1 &1199731169
 GameObject:
@@ -11075,7 +11117,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1211631915
 GameObject:
@@ -11315,7 +11357,7 @@ Transform:
   m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1236949026
 GameObject:
@@ -11360,8 +11402,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 064635b8cb2cda64db3d5e960d8915c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataContainer: {fileID: 708834532}
-  sequences:
+  DataContainer: {fileID: 708834532}
+  Sequences:
   - {fileID: 1042976530}
   cubeSpawner: {fileID: 104294956}
   topCubeMover: {fileID: 1576291528}
@@ -11412,11 +11454,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98c8ee3c698721a4ab4bd96cc868ecba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataContainer: {fileID: 708834532}
-  sequences:
+  DataContainer: {fileID: 708834532}
+  Sequences:
   - {fileID: 1751466732}
   scoreManager: {fileID: 2119743290}
   ui_manager: {fileID: 1731101681}
+  cameraManager: {fileID: 186193098}
 --- !u!1 &1256399633
 GameObject:
   m_ObjectHideFlags: 0
@@ -11481,7 +11524,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1384692901
 GameObject:
@@ -16350,7 +16393,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1539300695
 GameObject:
@@ -16428,7 +16471,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6931fae692d1084eacaf5ec62a48e48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
 --- !u!4 &1576291529
 Transform:
   m_ObjectHideFlags: 0
@@ -16486,8 +16528,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8286cd99ef88a5d41b8122164461cab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataContainer: {fileID: 708834532}
-  sequences:
+  DataContainer: {fileID: 708834532}
+  Sequences:
   - {fileID: 175811651}
   - {fileID: 1236949028}
   cubeSpawner: {fileID: 104294956}
@@ -16614,8 +16656,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c59316377dce25b48a9bee74737d1015, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataContainer: {fileID: 708834532}
-  sequences:
+  DataContainer: {fileID: 708834532}
+  Sequences:
   - {fileID: 1236949028}
   cubeSpawner: {fileID: 104294956}
   colormanager: {fileID: 1895264072}
@@ -16698,8 +16740,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 307dff66e52d64144b8347f77a68664f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataContainer: {fileID: 708834532}
-  sequences:
+  DataContainer: {fileID: 708834532}
+  Sequences:
   - {fileID: 1751466732}
   - {fileID: 1236949028}
   inputManager: {fileID: 2091128565}
@@ -21527,7 +21569,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &1769757791
 PrefabInstance:
@@ -21564,7 +21606,7 @@ PrefabInstance:
     - target: {fileID: 4041903311766470935, guid: 99c464f5b5678c6468ebe427501f8daa,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.041
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4041903311766470935, guid: 99c464f5b5678c6468ebe427501f8daa,
         type: 3}
@@ -21700,7 +21742,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: ba8c68d1c5884534f80db8b81c43d455, type: 2}
   - {fileID: 2100000, guid: bb3e5135f79fca946ae019034d6bf2c6, type: 2}
   - {fileID: 2100000, guid: 64e6edb2300edb54eb9fdb07f3e20106, type: 2}
-  currentMaterial: {fileID: 0}
+  CurrentMaterial: {fileID: 0}
 --- !u!1 &1900697936
 GameObject:
   m_ObjectHideFlags: 0
@@ -21744,8 +21786,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd0f13532a2c9784da487908cf9985ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataContainer: {fileID: 708834532}
-  sequences:
+  DataContainer: {fileID: 708834532}
+  Sequences:
   - {fileID: 605162185}
   - {fileID: 1725728512}
   - {fileID: 1586251612}

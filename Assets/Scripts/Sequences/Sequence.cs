@@ -4,14 +4,12 @@ using UnityEngine;
 
 public abstract class Sequence : MonoBehaviour
 {
-    public DataContainer dataContainer;
+    public Sequence[] Sequences;
 
-    public Sequence[] sequences;
+    public abstract void DoAction();
 
-    public abstract void doAction();
-
-    public abstract Sequence chooseNextSequence();
+    public abstract Sequence ChooseNextSequence();
 
     // Called everytime the current sequence changes
-    public abstract void setUp();
+    public abstract void SetUp();
 }

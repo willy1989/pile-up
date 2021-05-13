@@ -12,7 +12,7 @@ public class ScoreManager : MonoBehaviour
         //PlayerPrefs.SetInt("highScore", 0);
     }
 
-    public void setNewScoreHighScore()
+    public void SetNewScoreHighScore()
     {
         int highScore = PlayerPrefs.GetInt("highScore",0);
 
@@ -22,7 +22,7 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    public int getHighScore()
+    public int GetHighScore()
     {
         return PlayerPrefs.GetInt("highScore");
     }

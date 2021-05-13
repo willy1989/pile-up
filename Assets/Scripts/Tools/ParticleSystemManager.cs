@@ -6,7 +6,7 @@ public class ParticleSystemManager : MonoBehaviour
 {
     [SerializeField] ParticleSystem[] stackParticleSystem;
 
-    public void playStackParticleEffect(GameObject go, int level)
+    public void PlayStackParticleEffect(GameObject go, int level)
     {
         ParticleSystem particleSystem;
 

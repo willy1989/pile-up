@@ -8,24 +8,24 @@ public class Sequence_setUpGame : Sequence
 
     [SerializeField] UI_manager ui_manager;
 
+    [SerializeField] CameraManager cameraManager;
 
-    public override void setUp()
+    public override void SetUp()
     {
        
     }
 
-    public override void doAction()
+    public override void DoAction()
     {
-        Debug.Log("setup Sequence_gameStarts");
-
         // Set up camera distance
-        dataContainer.distCamBottomCube = dataContainer.cam.position - dataContainer.currentBottomCube.transform.position;
-        ui_manager.updateHighScore(scoreManager.getHighScore());
+        ui_manager.updateHighScore(scoreManager.GetHighScore());
     }
 
-    public override Sequence chooseNextSequence()
+    public override Sequence ChooseNextSequence()
     {
-        // 0 - Spawn moving cube
-        return sequences[0];
+        // 0 - Start game
+        return Sequences[0];
     }
+
+
 }

@@ -6,15 +6,17 @@ public class TopCubeMover : MonoBehaviour
 {
     private bool leftAxis = false;
 
-    public float speed = 1f;
+    private float speed = 1.75f;
 
     // Moves the moving between two waypoints
     // Sets those 2 waypoints
 
 
     // Randomly choose 2 points place either on the x or z axis
-    public Vector3[] getDestinations(Vector3 centerPos)
+    public void UpdateDataContainerMovingCubeDestination()
     {
+        Vector3 centerPos = DataContainer.Instance.CurrentBottomCube.transform.position + new Vector3(0f, DataContainer.Instance.CurrentBottomCube.transform.lossyScale.y, 0f);
+
         Vector3[] destinations = new Vector3[2];
 
         if(leftAxis == true)
@@ -31,23 +33,33 @@ public class TopCubeMover : MonoBehaviour
 
         leftAxis = !leftAxis;
 
-        return destinations;
+        DataContainer.Instance.MovingCubeDestination = destinations;
     }
 
-    public void moveCubeTo(GameObject movingCube, Vector3 destination)
+    public void MoveTopCube()
     {
+        // Every time the moving cube reaches one of its 2 destination, the next destination becomes the other one
+        if (CheckIfReachedDestination(DataContainer.Instance.CurrentMovingCube, DataContainer.Instance.MovingCubeDestination[0]) == true)
+        {
+            DataContainer.Instance.CurrentDestination = DataContainer.Instance.MovingCubeDestination[1];
+        }
+
+        else if (CheckIfReachedDestination(DataContainer.Instance.CurrentMovingCube, DataContainer.Instance.MovingCubeDestination[1]) == true)
+        {
+            DataContainer.Instance.CurrentDestination = DataContainer.Instance.MovingCubeDestination[0];
+        }
+
+        Vector3 destination = DataContainer.Instance.CurrentDestination;
+
+        GameObject movingCube = DataContainer.Instance.CurrentMovingCube;
+
         Vector3 direction = (destination - movingCube.transform.position).normalized;
 
         Vector3 moveVec = direction * speed * Time.deltaTime;
         movingCube.transform.position += moveVec;
     }
 
-    public Vector3 changeDestination(Vector3 newDestination)
-    {
-        return newDestination;
-    }
-
-    public bool checkIfReachedDestination(GameObject movingCube, Vector3 destination)
+    public bool CheckIfReachedDestination(GameObject movingCube, Vector3 destination)
     {
         if((destination - movingCube.transform.position).magnitude < 0.1f)
         {
@@ -60,7 +72,7 @@ public class TopCubeMover : MonoBehaviour
         }
     }
 
-    public void increaseSpeed()
+    public void IncreaseSpeed()
     {
         speed += 0.01f;
     }
