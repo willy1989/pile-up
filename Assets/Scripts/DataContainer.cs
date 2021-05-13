@@ -21,7 +21,7 @@ public class DataContainer : MonoBehaviour
 
     public GameObject CurrentBottomCube;
 
-    public GameObject CurrentMovingCube;
+    public GameObject MovingCube;
 
     public Vector3[] MovingCubeDestination;
 

@@ -20,10 +20,11 @@ public class Sequence_SpawnMovingCube : Sequence
 
         topCubeMover.IncreaseSpeed();
 
-        DataContainer.Instance.CurrentMovingCube = cubeSpawner.SpawnMovingCube();
+        cubeSpawner.SpawnMovingCube();
 
         colorManager.ChangeMaterial();
-        DataContainer.Instance.CurrentMovingCube.GetComponent<MeshRenderer>().material = colorManager.CurrentMaterial;
+
+        DataContainer.Instance.MovingCube.GetComponent<MeshRenderer>().material = colorManager.CurrentMaterial;
 
         cameraManager.MoveCamera();
     }
