@@ -32,6 +32,8 @@ public class Sequence_spawnStackedCutCubes : Sequence
         DataContainer.Instance.ComboCount = 0;
 
         audioManager.PlaySoundEffect(audioManager.StackSound);
+
+        DataContainer.Instance.MovingCube.SetActive(false);
     }
 
     public override Sequence ChooseNextSequence()

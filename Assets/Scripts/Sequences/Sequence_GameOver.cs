@@ -15,7 +15,7 @@ public class Sequence_GameOver : Sequence
     public override void DoAction()
     {
         ui_manager.showUiElement(ui_manager.gameOverButton, true);
-        cubeSpawner.SetRigidBdtoGravity(DataContainer.Instance.CurrentMovingCube);
+        cubeSpawner.SetRigidBdtoGravity(DataContainer.Instance.MovingCube);
 
         // New high score
         if (scoreManager.GetHighScore() < scoreManager.score)

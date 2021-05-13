@@ -39,12 +39,9 @@ public class Sequence_SpawnOnlyStackedCube : Sequence
         particleSystemManager.PlayStackParticleEffect(stackedCube, DataContainer.Instance.ComboCount);
 
 
-        // Update references
         DataContainer.Instance.CurrentBottomCube = stackedCube;
 
-        GameObject.Destroy(DataContainer.Instance.CurrentMovingCube);
-
-        DataContainer.Instance.CurrentMovingCube = null;
+        DataContainer.Instance.MovingCube.SetActive(false);
     }
 
     private bool checkGrowCube()

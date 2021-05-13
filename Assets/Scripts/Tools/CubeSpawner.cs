@@ -28,8 +28,6 @@ public class CubeSpawner : MonoBehaviour
             cutCubePool[i] = (GameObject)Instantiate(cutCubePrefab, new Vector3(10, 10, 10), Quaternion.identity);
             cutCubePool[i].SetActive(false);
         }
-
-        //Debug.Log("cutCubePool.Length =" + cutCubePool.Length);
     }
     
 
@@ -44,7 +42,7 @@ public class CubeSpawner : MonoBehaviour
     // Based on the position of the top and bottom cubes, choose a different spawning method
     public GameObject[] SpawnStackAndCutCubes()
     {
-        GameObject topCube = DataContainer.Instance.CurrentMovingCube;
+        GameObject topCube = DataContainer.Instance.MovingCube;
         GameObject bottomCube = DataContainer.Instance.CurrentBottomCube;
 
         GameObject[] cubes = new GameObject[2];
@@ -81,8 +79,6 @@ public class CubeSpawner : MonoBehaviour
                 cubes = instantiateNewCubesZ(topCube, TCData, BCData, 2, 5, -1);
             }
         }
-
-        GameObject.Destroy(topCube);
 
         return cubes;
     }
@@ -158,13 +154,15 @@ public class CubeSpawner : MonoBehaviour
     // Spawn a new cube above of the bottom cube
     // It moves back and forth until the player decides to place it on the stack
     // Its scale should be the same as the current bottom cube
-    public GameObject SpawnMovingCube()
+    public void SpawnMovingCube()
     {
-        GameObject movingCube = (GameObject)Instantiate(cubePrefab, DataContainer.Instance.MovingCubeDestination[0], Quaternion.identity);
+        DataContainer.Instance.MovingCube.SetActive(true);
 
-        movingCube.transform.localScale = DataContainer.Instance.CurrentBottomCube.transform.localScale;
+        DataContainer.Instance.MovingCube.transform.localScale = DataContainer.Instance.CurrentBottomCube.transform.localScale;
 
-        return movingCube;
+        DataContainer.Instance.MovingCube.transform.position = DataContainer.Instance.MovingCubeDestination[0];
+
+        DataContainer.Instance.MovingCube.transform.rotation = Quaternion.identity;
     }
 
 

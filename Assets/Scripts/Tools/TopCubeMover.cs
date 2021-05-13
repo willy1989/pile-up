@@ -39,19 +39,19 @@ public class TopCubeMover : MonoBehaviour
     public void MoveTopCube()
     {
         // Every time the moving cube reaches one of its 2 destination, the next destination becomes the other one
-        if (CheckIfReachedDestination(DataContainer.Instance.CurrentMovingCube, DataContainer.Instance.MovingCubeDestination[0]) == true)
+        if (CheckIfReachedDestination(DataContainer.Instance.MovingCube, DataContainer.Instance.MovingCubeDestination[0]) == true)
         {
             DataContainer.Instance.CurrentDestination = DataContainer.Instance.MovingCubeDestination[1];
         }
 
-        else if (CheckIfReachedDestination(DataContainer.Instance.CurrentMovingCube, DataContainer.Instance.MovingCubeDestination[1]) == true)
+        else if (CheckIfReachedDestination(DataContainer.Instance.MovingCube, DataContainer.Instance.MovingCubeDestination[1]) == true)
         {
             DataContainer.Instance.CurrentDestination = DataContainer.Instance.MovingCubeDestination[0];
         }
 
         Vector3 destination = DataContainer.Instance.CurrentDestination;
 
-        GameObject movingCube = DataContainer.Instance.CurrentMovingCube;
+        GameObject movingCube = DataContainer.Instance.MovingCube;
 
         Vector3 direction = (destination - movingCube.transform.position).normalized;
 
@@ -74,6 +74,6 @@ public class TopCubeMover : MonoBehaviour
 
     public void IncreaseSpeed()
     {
-        speed += 0.01f;
+        speed += 0.015f;
     }
 }
