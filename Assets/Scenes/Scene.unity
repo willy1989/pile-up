@@ -6215,10 +6215,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dcf14489c75a024ea024eea8258863d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StackSound: {fileID: 0}
-  PerfectlyStackSound: {fileID: 0}
-  GrowCubeSound: {fileID: 0}
-  NewRecordSound: {fileID: 0}
+  StackSound: {fileID: 8300000, guid: b43d102aac6b145468dcaa94a5cccae1, type: 3}
+  PerfectlyStackSound: {fileID: 8300000, guid: 657578e4be6b64dbf9b09deada272e55, type: 3}
+  GrowCubeSound: {fileID: 8300000, guid: 79e6baad2fd414b82a6d49ce1568d2e5, type: 3}
+  NewRecordSound: {fileID: 8300000, guid: 7478151cf36724a7dada558f746c3633, type: 3}
   audioSource: {fileID: 1139238966}
 --- !u!1 &1199731169
 GameObject:

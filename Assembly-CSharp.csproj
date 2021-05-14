@@ -62,11 +62,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\ChangeColorTest.cs" />
-    <Compile Include="Assets\Scripts\coroutineTest.cs" />
     <Compile Include="Assets\Scripts\CutCube_deactivate.cs" />
     <Compile Include="Assets\Scripts\DataContainer.cs" />
-    <Compile Include="Assets\Scripts\FrameRateSettings.cs" />
     <Compile Include="Assets\Scripts\Sequences\Sequence.cs" />
     <Compile Include="Assets\Scripts\Sequences\Sequence_checkStackCubeCollision.cs" />
     <Compile Include="Assets\Scripts\Sequences\Sequence_GameOver.cs" />
@@ -90,7 +87,7 @@
     <Compile Include="Assets\Scripts\Tools\ScenesManager.cs" />
     <Compile Include="Assets\Scripts\Tools\ScoreManager.cs" />
     <Compile Include="Assets\Scripts\Tools\TopCubeMover.cs" />
-    <Compile Include="Assets\Scripts\UI_manager.cs" />
+    <Compile Include="Assets\Scripts\Tools\UI_manager.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/willy/Documents/unity/Pile_up/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
