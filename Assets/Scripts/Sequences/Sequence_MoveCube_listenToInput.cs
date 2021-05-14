@@ -28,7 +28,6 @@ public class Sequence_MoveCube_listenToInput : Sequence
             touchDown = true;
         }
 
-
         // Move top cube
         // If the player taps the screen, then we stop moving the cube right away, i.e. the frame when the player tapped the screen
         if (touchDown == false)

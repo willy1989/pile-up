@@ -38,7 +38,6 @@ public class Sequence_SpawnOnlyStackedCube : Sequence
         // Particle system effect
         particleSystemManager.PlayStackParticleEffect(stackedCube, DataContainer.Instance.ComboCount);
 
-
         DataContainer.Instance.CurrentBottomCube = stackedCube;
 
         DataContainer.Instance.MovingCube.SetActive(false);
@@ -73,14 +72,11 @@ public class Sequence_SpawnOnlyStackedCube : Sequence
             return Sequences[0];
         }
             
-
         // Spawn moving cube, the game loop restarts
         else
         {
             return Sequences[1];
         }
-            
-        
     }
 
 }

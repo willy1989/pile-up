@@ -9,5 +9,4 @@ public class ScenesManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
 }

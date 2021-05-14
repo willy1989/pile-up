@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CubeCornerPosition : MonoBehaviour
 {
-    
     public Vector3[] GetCornerPos()
     {
         Vector3[] corners = new Vector3[8];
@@ -24,8 +23,6 @@ public class CubeCornerPosition : MonoBehaviour
 
         return corners;
     }
-
-
 
     // Bottom    Top
     // 3  2      7  6
