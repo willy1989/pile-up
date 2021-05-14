@@ -29,13 +29,13 @@ public class Sequence_startGame : Sequence
     public override void DoAction()
     {
         checkInput();
+
         if(touchDown == true)
         {
             uiManager.showUiElement(uiManager.HighScoreText.gameObject, false);
             uiManager.showUiElement(uiManager.ScoreText.gameObject, true);
             uiManager.showUiElement(uiManager.StartGameText.gameObject, false);
         }
-        
     }
 
     public override Sequence ChooseNextSequence()

@@ -8,15 +8,10 @@ public class CubeCollision : MonoBehaviour
     {
         Collider[] colliders = Physics.OverlapBox(overlapBoxPos, overlapBoxScale / 2);
 
-        //Debug.Log("colliders.Length =" + colliders.Length);
-        foreach(Collider col in colliders)
-        {
-            //Debug.Log("collider =" + col.name);
-        }
-
         // Only one collider means the overlapbox only collided with the top cube
         // Two colliders means the overlapbox collided with the bottom and top cube, 
         // which means top cube touches bottom cube
+
         if(colliders.Length == 2)
         {
             return true;
@@ -37,24 +32,15 @@ public class CubeCollision : MonoBehaviour
 
         float dist = (topCubeCornerPos - bottomCubeCornerPos).magnitude;
 
-        
-
-        if (dist < 0.2f)
+        if (dist < 0.07f)
         {
-            //Debug.Log("currentWayPoint = " + currentWayPoint);
-
             float distTopCubeWayPoint = (topCubeCornerPos - currentWayPoint).magnitude;
             float distBottomCubeWayPoint = (bottomCubeCornerPos - currentWayPoint).magnitude;
 
-            //Debug.Log("distTopCubeWayPoint = " + distTopCubeWayPoint);
-            //Debug.Log("distBottomCubeWayPoint = " + distBottomCubeWayPoint);
-
             if (topCubeCornerPos.y > bottomCubeCornerPos.y && distTopCubeWayPoint > distBottomCubeWayPoint)
             {
-                //Debug.Log("X axis");
                 return true;
             }
-            
 
             else if(topCubeCornerPos.y < bottomCubeCornerPos.y && distTopCubeWayPoint > distBottomCubeWayPoint)
             {
@@ -63,10 +49,8 @@ public class CubeCollision : MonoBehaviour
 
             else if (topCubeCornerPos.x > bottomCubeCornerPos.x && distTopCubeWayPoint > distBottomCubeWayPoint)
             {
-                //Debug.Log("X axis");
                 return true;
             }
-
 
             else if (topCubeCornerPos.x < bottomCubeCornerPos.x && distTopCubeWayPoint > distBottomCubeWayPoint)
             {
@@ -77,16 +61,12 @@ public class CubeCollision : MonoBehaviour
             {
                 return false;
             }
-
-
         }
-            
 
         else
         {
             return false;
         }
-            
     }
 
 }
