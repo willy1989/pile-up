@@ -10,7 +10,6 @@ ScriptsOnlyBuild:
     - CubeSpawner
     - CutCube_deactivate
     - DataContainer
-    - FrameRateSettings
     - InputManager
     - ParticleSystemManager
     - ScenesManager
@@ -27,6 +26,8 @@ ScriptsOnlyBuild:
     - Sequence_startGame
     - TopCubeMover
     - UI_manager
+    Unity.Rider.Editor.dll:
+    - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -36,6 +37,7 @@ ScriptsOnlyBuild:
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
+    - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -45,7 +47,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/Scenes/Scene.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -72,6 +74,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 82
       Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 104
@@ -79,76 +83,76 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9674}
+      Script: {instanceID: 13560}
     - Class: 114
-      Script: {instanceID: 9734}
+      Script: {instanceID: 13624}
     - Class: 114
-      Script: {instanceID: 9750}
+      Script: {instanceID: 13642}
     - Class: 114
-      Script: {instanceID: 9826}
+      Script: {instanceID: 13720}
     - Class: 114
-      Script: {instanceID: 9866}
+      Script: {instanceID: 13760}
     - Class: 114
-      Script: {instanceID: 10040}
+      Script: {instanceID: 13934}
     - Class: 114
-      Script: {instanceID: 10118}
+      Script: {instanceID: 14018}
     - Class: 114
-      Script: {instanceID: 10220}
+      Script: {instanceID: 14128}
     - Class: 114
-      Script: {instanceID: 10238}
+      Script: {instanceID: 14146}
     - Class: 114
-      Script: {instanceID: 10254}
+      Script: {instanceID: 14166}
     - Class: 114
-      Script: {instanceID: 10274}
+      Script: {instanceID: 14186}
     - Class: 114
-      Script: {instanceID: 10348}
+      Script: {instanceID: 14262}
     - Class: 114
-      Script: {instanceID: 10380}
+      Script: {instanceID: 14310}
     - Class: 114
-      Script: {instanceID: 10438}
+      Script: {instanceID: 14372}
     - Class: 114
-      Script: {instanceID: 10446}
+      Script: {instanceID: 14382}
     - Class: 114
-      Script: {instanceID: 10450}
+      Script: {instanceID: 14404}
     - Class: 114
-      Script: {instanceID: 10470}
+      Script: {instanceID: 14426}
     - Class: 114
-      Script: {instanceID: 10492}
+      Script: {instanceID: 14436}
     - Class: 114
-      Script: {instanceID: 10502}
+      Script: {instanceID: 14486}
     - Class: 114
-      Script: {instanceID: 10548}
+      Script: {instanceID: 14540}
     - Class: 114
-      Script: {instanceID: 10596}
+      Script: {instanceID: 14552}
     - Class: 114
-      Script: {instanceID: 10606}
+      Script: {instanceID: 14670}
     - Class: 114
-      Script: {instanceID: 10718}
+      Script: {instanceID: 14686}
     - Class: 114
-      Script: {instanceID: 10734}
+      Script: {instanceID: 14840}
     - Class: 114
-      Script: {instanceID: 10890}
+      Script: {instanceID: 15000}
     - Class: 114
-      Script: {instanceID: 11038}
+      Script: {instanceID: 15010}
     - Class: 114
-      Script: {instanceID: 11046}
+      Script: {instanceID: 15034}
     - Class: 114
-      Script: {instanceID: 11070}
+      Script: {instanceID: 15132}
     - Class: 114
-      Script: {instanceID: 11166}
+      Script: {instanceID: 15192}
     - Class: 114
-      Script: {instanceID: 11232}
+      Script: {instanceID: 15294}
     - Class: 114
-      Script: {instanceID: 11334}
+      Script: {instanceID: 15300}
     - Class: 114
-      Script: {instanceID: 11340}
-    - Class: 114
-      Script: {instanceID: 11400}
+      Script: {instanceID: 15368}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
       Script: {instanceID: 0}
     - Class: 198
       Script: {instanceID: 0}
@@ -173,7 +177,7 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
-      Hash: 3c08375166df118bd1801438fc36b92f
+      Hash: c42672c997f8be6b1aa86a927ebea785
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SelectionCaret
@@ -209,6 +213,12 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.TestRunner.dll
+    namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
+    className: PlayerQuitHandler
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -221,7 +231,7 @@ ScriptsOnlyBuild:
     className: ActivationTrack
   - hash:
       serializedVersion: 2
-      Hash: 72712369a7c681ad84fc255a5ec0b333
+      Hash: aeb62f729c52c814dec86c47dcac1471
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Text
@@ -245,7 +255,7 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: 8e0313c6f5e2ce35991fec2d64f8eaab
+      Hash: 89f9a1b4c64db9559e39f4a2e3bfaadd
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Image
@@ -317,7 +327,7 @@ ScriptsOnlyBuild:
     className: RectMask2D
   - hash:
       serializedVersion: 2
-      Hash: 4e9333594897a1fb8b136ad2eae996c7
+      Hash: d941ab6dd93d37ffdf2277f2ea2375a0
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SubMeshUI
@@ -431,12 +441,6 @@ ScriptsOnlyBuild:
     className: ParticleSystemManager
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: FrameRateSettings
-  - hash:
-      serializedVersion: 2
       Hash: f45582fb0383cf5f01edb3c48b22eac5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -473,12 +477,6 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: coroutineTest
-  - hash:
-      serializedVersion: 2
       Hash: a1e4d81995c9d2393662fbdf1dac6037
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -503,7 +501,7 @@ ScriptsOnlyBuild:
     className: Sequence_SpawnMovingCube
   - hash:
       serializedVersion: 2
-      Hash: feb9a5a121d15fa3654d4e50a5233045
+      Hash: f84d945e5e1ca985698660fc26e9657f
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RawImage
@@ -581,7 +579,7 @@ ScriptsOnlyBuild:
     className: CutCube_deactivate
   - hash:
       serializedVersion: 2
-      Hash: 3b760e6526e13f7504f59e210145899a
+      Hash: 8001a5f7502aab37e42206da015e6914
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshProUGUI
@@ -641,13 +639,7 @@ ScriptsOnlyBuild:
     className: Sequence_GameOver
   - hash:
       serializedVersion: 2
-      Hash: c50ee3c60454d7931917abfda8f4e815
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ChangeColorTest
-  - hash:
-      serializedVersion: 2
-      Hash: df434544c9f7b33d1cc7e635b180d279
+      Hash: 21d73eda81c18eacd2c91ad5dfaf2e32
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshPro
@@ -701,7 +693,13 @@ ScriptsOnlyBuild:
     className: TMP_SubMesh
   - hash:
       serializedVersion: 2
-      Hash: 20eeaeae829475b5e354d1f626c51a2b
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.TestRunner.dll
+    namespaceName: UnityEngine.TestRunner.Utils
+    className: TestRunCallbackListener
+  - hash:
+      serializedVersion: 2
+      Hash: 4ef0f7d42cdb13479386e1f049c315aa
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner
     className: PlaymodeTestsController
@@ -749,5 +747,5 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 13
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/willy/Documents/unity/Pile_up/devBuild.apk
+  - Assets/Scenes/Scene.unity
+  playerPath: C:/Users/willy/Documents/unity/Pile_up/googleRelease.aab

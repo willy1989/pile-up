@@ -12,7 +12,6 @@ public class CubeSpawner : MonoBehaviour
     [SerializeField] int cutCubePoolIndex = -1;
     [SerializeField] GameObject[] cutCubePool;
 
-
     public void Awake()
     {
         populateCutCubePool(5);
@@ -30,7 +29,6 @@ public class CubeSpawner : MonoBehaviour
         }
     }
     
-
     // Cycle through the pool to get the next cube
     private void incrementCutCubeIndex()
     {

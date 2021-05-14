@@ -8,11 +8,7 @@ public class TopCubeMover : MonoBehaviour
 
     private float speed = 1.75f;
 
-    // Moves the moving between two waypoints
-    // Sets those 2 waypoints
-
-
-    // Randomly choose 2 points place either on the x or z axis
+    // Randomly choose 2 waypoints, placed either on the x or z axis
     public void UpdateDataContainerMovingCubeDestination()
     {
         Vector3 centerPos = DataContainer.Instance.CurrentBottomCube.transform.position + new Vector3(0f, DataContainer.Instance.CurrentBottomCube.transform.lossyScale.y, 0f);

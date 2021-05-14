@@ -38,7 +38,7 @@ public class Sequence_spawnStackedCutCubes : Sequence
 
     public override Sequence ChooseNextSequence()
     {
-        // Spawn moving cube, the game loop restarts
+        // Spawns moving cube, the game loop restarts
         return Sequences[0];
     }
 
